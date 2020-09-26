@@ -1,0 +1,27 @@
+extend type Query {
+  schedule: Schedule!
+  schedules: [Schedule!]!
+}
+
+extend type Mutation {
+  createSchedule(input: CreateScheduleInput!): Schedule!
+}
+
+input CreateScheduleInput {
+  doctor: ID!
+  date: Date!
+  hour: Date!
+}
+
+type Schedule {
+  doctor: ID!
+  patient: ID!
+  date: Date!
+  hour: Date!
+  status: ScheduleStatus!
+}
+
+enum ScheduleStatus {
+  SCHEDULED
+  CANCELED
+}

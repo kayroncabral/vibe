@@ -1,4 +1,4 @@
-scalar DateTime
+scalar Date
 
 # Note: In the current version of GraphQL, you can’t have an empty
 # type even if you intend to extend it later. So we need to make sure
@@ -28,8 +28,8 @@ interface Node {
 
 interface User {
   name: String!
-  gender: Sex!
-  birthday: DateTime!
+  sex: Sex!
+  birthday: Date!
 }
 
 enum AuthenticationRole {
