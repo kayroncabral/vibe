@@ -1,0 +1,8 @@
+type Patient implements User & Node {
+  id: ID!
+  name: String!
+  sex: Sex!
+  birthday: Date!
+  role: String!
+  federalTaxNumber: String!
+}
