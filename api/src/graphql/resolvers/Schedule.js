@@ -1,15 +1,12 @@
-import { Patient } from 'src/models'
+import { Patient, Doctor } from 'src/models'
 
 const Schedule = {
-  // patient(parent, args, context, info) {
-  //   const doctor = '5f70c3a4d86a530a98f904ce'
-  //
-  //   const conditions = { doctor }
-  //
-  //   if (args.name) conditions.$text = { $search: args.name }
-  //
-  //   return Patient.findOne(conditions)
-  // }
+  doctor(parent, args, context, info) {
+    return Doctor.findById(parent.doctor)
+  },
+  patient(parent, args, context, info) {
+    return Patient.findById(parent.patient)
+  }
 }
 
 export default Schedule

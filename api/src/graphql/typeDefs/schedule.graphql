@@ -5,10 +5,9 @@ extend type Query {
 
 extend type Mutation {
   createSchedules(input: CreateSchedulesInput!): [Schedule!]!
-}
 
-input SchedulesInput {
-  filter: SchedulesFilterInput
+  schedule(input: ScheduleInput!): Schedule!
+  cancelSchedule(input: CancelScheduleInput!): Schedule!
 }
 
 input SchedulesFilterInput {
@@ -21,14 +20,31 @@ input CreateSchedulesInput {
   dates: [Date!]!
 }
 
-type Schedule {
-  doctor: ID!
+input SchedulesInput {
+  filter: SchedulesFilterInput
+}
+
+input ScheduleInput {
+  schedule: ID!
+  patient: ID!
+}
+
+input CancelScheduleInput {
+  schedule: ID!
+  patient: ID!
+}
+
+type Schedule implements Node {
+  id: ID!
+  doctor: Doctor!
   patient(name: String): Patient
   date: Date!
   status: ScheduleStatus
+  scheduledAt: Date
 }
 
 enum ScheduleStatus {
+  AVAILABLE
   SCHEDULED
   CANCELED
 }

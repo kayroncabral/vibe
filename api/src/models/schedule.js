@@ -22,9 +22,12 @@ const ScheduleSchema = new mongoose.Schema(
     status: {
       type: String,
       enum: Object.values(ScheduleStatus),
+      default: ScheduleStatus.AVAILABLE,
       set: (value) => value?.toLowerCase(),
       get: (value) => value?.toUpperCase()
-    }
+    },
+    scheduledAt: Date,
+    canceleddAt: Date
   },
   {
     timestamps: true

@@ -1,4 +1,5 @@
 export const ScheduleStatus = Object.freeze({
+  AVAILABLE: 'available',
   SCHEDULED: 'scheduled',
   CANCELED: 'canceled'
 })
