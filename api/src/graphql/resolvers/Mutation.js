@@ -1,10 +1,10 @@
 import { createDoctor } from 'src/graphql/doctor/mutations'
-import { createSchedule } from 'src/graphql/schedule/mutations'
+import { createSchedules } from 'src/graphql/schedule/mutations'
 
 const Mutation = {
   createDoctor,
 
-  createSchedule
+  createSchedules
 }
 
 export default Mutation

@@ -4,12 +4,11 @@ extend type Query {
 }
 
 extend type Mutation {
-  createSchedule(input: CreateScheduleInput!): Schedule!
+  createSchedules(input: CreateSchedulesInput!): [Schedule!]!
 }
 
-input CreateScheduleInput {
-  doctor: ID!
-  date: Date!
+input CreateSchedulesInput {
+  dates: [Date!]!
 }
 
 type Schedule {

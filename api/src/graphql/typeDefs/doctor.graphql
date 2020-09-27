@@ -13,7 +13,8 @@ input CreateDoctorInput {
   crm: String!
 }
 
-type Doctor implements User {
+type Doctor implements User & Node {
+  id: ID!
   name: String!
   sex: Sex!
   birthday: Date!
