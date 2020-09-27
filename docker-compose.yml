@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  mongo:
+    image: mongo:4.2.5
+    container_name: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/var/lib/mongo
+  mongo_test:
+    image: mongo:4.2.5
+    container_name: mongo_test
+    restart: always
+    ports:
+      - 27020:27017
+    volumes:
+      - mongo:/var/lib/mongo
+  api:
+    image: vibe_api
+    container_name: vibe_api
+    build: ./api
+    volumes:
+      - /usr/src/app/node_modules
+      - ./api:/usr/src/app
+    env_file:
+      - ./api/development.env
+    ports:
+      - 4000:4000
+    depends_on:
+      - mongo
+volumes:
+  mongo:
