@@ -1,10 +1,5 @@
-export const doctors = async () => {
-  return [
-    {
-      name: 'Doctor 1',
-      sex: 'male',
-      birthday: '02/07/1990',
-      crm: '123123'
-    }
-  ]
+import { Doctor } from 'src/models'
+
+export const doctors = async (parent, { input }, context, info) => {
+  return Doctor.find({})
 }
