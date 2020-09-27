@@ -27,4 +27,6 @@ const UserSchema = new mongoose.Schema(
   }
 )
 
+UserSchema.index({ name: 'text' })
+
 export default mongoose.model('User', UserSchema)
