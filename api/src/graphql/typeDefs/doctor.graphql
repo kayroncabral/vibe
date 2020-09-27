@@ -17,6 +17,6 @@ type Doctor implements User {
   name: String!
   sex: Sex!
   birthday: Date!
-  role: Role!
+  role: String!
   crm: String!
 }

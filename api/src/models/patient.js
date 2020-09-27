@@ -10,14 +10,7 @@ const PatientSchema = new mongoose.Schema({
     unique: true,
     required: true,
     trim: true
-  },
-  role: {
-    type: String,
-    enum: [Roles.PATIENT],
-    default: Roles.PATIENT,
-    required: true,
-    immutable: true
   }
 })
 
-export default User.discriminator('Patient', PatientSchema)
+export default User.discriminator(Roles.PATIENT, PatientSchema)

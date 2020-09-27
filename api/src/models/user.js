@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-import { Sex, Roles } from 'src/utils/enums'
+import { Sex } from 'src/utils/enums'
 
 const UserSchema = new mongoose.Schema(
   {
@@ -19,17 +19,12 @@ const UserSchema = new mongoose.Schema(
       required: true,
       set: (value) => value.toLowerCase(),
       get: (value) => value.toUpperCase()
-    },
-    role: {
-      type: String,
-      enum: Object.values(Roles),
-      required: true,
-      immutable: true,
-      set: (value) => value.toLowerCase(),
-      get: (value) => value.toUpperCase()
     }
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    discriminatorKey: 'role'
+  }
 )
 
 export default mongoose.model('User', UserSchema)

@@ -30,7 +30,7 @@ interface User {
   name: String!
   sex: Sex!
   birthday: Date!
-  role: Role!
+  role: String!
 }
 
 enum AuthenticationRole {
@@ -41,9 +41,4 @@ enum AuthenticationRole {
 enum Sex {
   MALE
   FEMALE
-}
-
-enum Role {
-  DOCTOR
-  PATIENT
 }
