@@ -1,23 +1,8 @@
-extend type Query {
-  doctors: [Doctor]!
-}
-
-extend type Mutation {
-  createDoctor(input: CreateDoctorInput!): Doctor!
-}
-
-input CreateDoctorInput {
-  name: String!
-  sex: Sex!
-  birthday: Date!
-  crm: String!
-}
-
-type Doctor implements User & Node {
+type Patient implements User & Node {
   id: ID!
   name: String!
   sex: Sex!
   birthday: Date!
   role: String!
-  crm: String!
+  federalTaxNumber: String!
 }

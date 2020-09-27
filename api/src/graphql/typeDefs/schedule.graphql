@@ -1,10 +1,20 @@
 extend type Query {
   schedule: Schedule!
-  schedules: [Schedule!]!
+  schedules(input: SchedulesInput): [Schedule!]!
 }
 
 extend type Mutation {
   createSchedules(input: CreateSchedulesInput!): [Schedule!]!
+}
+
+input SchedulesInput {
+  filter: SchedulesFilterInput
+}
+
+input SchedulesFilterInput {
+  start: Date
+  end: Date
+  status: ScheduleStatus
 }
 
 input CreateSchedulesInput {
@@ -13,7 +23,7 @@ input CreateSchedulesInput {
 
 type Schedule {
   doctor: ID!
-  patient: ID
+  patient(name: String): Patient
   date: Date!
   status: ScheduleStatus
 }

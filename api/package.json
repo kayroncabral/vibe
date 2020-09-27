@@ -15,6 +15,7 @@
   "dependencies": {
     "apollo-server": "^2.18.1",
     "apollo-server-testing": "^2.18.1",
+    "date-fns": "^2.16.1",
     "env-cmd": "^10.1.0",
     "graphql": "^15.3.0",
     "mongoose": "^5.10.7"
