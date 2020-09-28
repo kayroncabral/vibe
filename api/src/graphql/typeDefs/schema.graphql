@@ -29,7 +29,7 @@ interface Node {
 interface User {
   name: String!
   sex: Sex!
-  birthday: Date!
+  birthday: String!
   role: String!
 }
 

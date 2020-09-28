@@ -1,4 +1,4 @@
-import { SchemaDirectiveVisitor } from 'apollo-server'
+import { SchemaDirectiveVisitor } from 'apollo-server-express'
 import { defaultFieldResolver } from 'graphql'
 
 // import { getAuthFromRequest } from 'src/utils/auth'

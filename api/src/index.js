@@ -1,4 +1,6 @@
-import { ApolloServer } from 'apollo-server'
+import { ApolloServer } from 'apollo-server-express'
+import express from 'express'
+import http from 'http'
 
 import 'src/mongoose'
 
@@ -6,6 +8,10 @@ import { typeDefs, resolvers } from 'src/graphql'
 
 export const server = new ApolloServer({ typeDefs, resolvers })
 
-server.listen(process.env.PORT).then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`)
+const app = express()
+
+server.applyMiddleware({ app })
+
+http.createServer(app).listen(process.env.PORT, () => {
+  console.log(`🚀 Server ready at http://localhost:${process.env.PORT}${server.graphqlPath}`)
 })

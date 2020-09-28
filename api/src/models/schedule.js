@@ -27,7 +27,7 @@ const ScheduleSchema = new mongoose.Schema(
       get: (value) => value?.toUpperCase()
     },
     scheduledAt: Date,
-    canceleddAt: Date
+    canceledAt: Date
   },
   {
     timestamps: true

@@ -17,7 +17,7 @@ type Patient implements User & Node {
   id: ID!
   name: String!
   sex: Sex!
-  birthday: Date!
+  birthday: String!
   role: String!
   federalTaxNumber: String!
 }

@@ -1,6 +1,5 @@
 extend type Query {
-  schedule: Schedule!
-  schedules(input: SchedulesInput): [Schedule!]!
+  schedules(input: SchedulesInput!): [Schedule!]!
 }
 
 extend type Mutation {
@@ -21,6 +20,7 @@ input CreateSchedulesInput {
 }
 
 input SchedulesInput {
+  doctor: ID!
   filter: SchedulesFilterInput
 }
 
@@ -41,6 +41,7 @@ type Schedule implements Node {
   date: Date!
   status: ScheduleStatus
   scheduledAt: Date
+  canceledAt: Date
 }
 
 enum ScheduleStatus {

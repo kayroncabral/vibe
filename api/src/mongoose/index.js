@@ -1,7 +1,5 @@
 import mongoose from 'mongoose'
 
-mongoose.Promise = global.Promise
-
 const ObjectId = mongoose.Types.ObjectId
 
 ObjectId.prototype.valueOf = function () {
@@ -9,13 +7,14 @@ ObjectId.prototype.valueOf = function () {
 }
 
 const options = {
+  useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
 }
 
 mongoose.connect(process.env.MONGODB_HOST, options)
 
-mongoose.connection.on('connected', () => {
+mongoose.connection.once('open', () => {
   console.log('[Mongoose] connected')
 })
 
