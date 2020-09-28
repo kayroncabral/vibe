@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+import logger from 'src/utils/logger'
+
 const ObjectId = mongoose.Types.ObjectId
 
 ObjectId.prototype.valueOf = function () {
@@ -15,13 +17,13 @@ const options = {
 mongoose.connect(process.env.MONGODB_HOST, options)
 
 mongoose.connection.once('open', () => {
-  console.log('[Mongoose] connected')
+  logger.debug('[Mongoose] connected')
 })
 
 mongoose.connection.on('error', (error) => {
-  console.log('[Mongoose] error', error)
+  logger.error('[Mongoose] error', error)
 })
 
 mongoose.connection.on('disconnected', () => {
-  console.log('[Mongoose] disconnected')
+  logger.debug('[Mongoose] disconnected')
 })
