@@ -1,0 +1,22 @@
+extend type Query {
+  appointments: [Appointment!]!
+}
+
+extend type Mutation {
+  createAppointment(input: CreateAppointmentInput!): Appointment!
+}
+
+input CreateAppointmentInput {
+  schedule: ID!
+  icd: String!
+  description: String!
+}
+
+type Appointment implements Node {
+  id: ID!
+  doctor: Doctor!
+  patient: Patient!
+  schedule: Schedule!
+  icd: String!
+  description: String!
+}

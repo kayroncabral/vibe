@@ -3,16 +3,27 @@ import { addHours, subHours } from 'date-fns'
 import { DOCTOR } from 'src/test/payloads/doctors'
 import { PATIENT } from 'src/test/payloads/patients'
 
+import { ScheduleStatus } from 'src/utils/enums'
+
+export const SCHEDULE = {
+  _id: '5f70f2a7dcaf370afa8053f4',
+  status: ScheduleStatus.BOOKED.toUpperCase(),
+  doctor: DOCTOR._id,
+  date: new Date(),
+  patient: PATIENT._id,
+  scheduledAt: subHours(new Date(), 24)
+}
+
 export const AVAILABLE_SCHEDULE = {
   _id: '5f70f2a7dcaf370afa8053f6',
-  status: 'AVAILABLE',
+  status: ScheduleStatus.AVAILABLE.toUpperCase(),
   doctor: DOCTOR._id,
   date: new Date('2020-09-27T15:00:00.000Z')
 }
 
 export const SCHEDULED_SCHEDULE = {
   _id: '5f70f2a7dcaf370afa8053f8',
-  status: 'SCHEDULED',
+  status: ScheduleStatus.BOOKED.toUpperCase(),
   doctor: DOCTOR._id,
   date: addHours(new Date(), 25),
   patient: PATIENT._id,
@@ -21,7 +32,7 @@ export const SCHEDULED_SCHEDULE = {
 
 export const CANCELED_SCHEDULE = {
   _id: '5f70f2a7dcaf370afa8053fb',
-  status: 'CANCELED',
+  status: ScheduleStatus.CANCELED.toUpperCase(),
   doctor: DOCTOR._id,
   date: new Date('2020-09-28T23:00:00.000Z'),
   patient: PATIENT._id,

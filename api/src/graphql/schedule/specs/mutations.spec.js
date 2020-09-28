@@ -29,10 +29,30 @@ test.afterEach.always(async (t) => {
   await Schedule.deleteMany({})
 })
 
+test('should throw error if schedule id is not valid when schedule', async (t) => {
+  const { mutate } = createTestClient(server)
+  const input = { schedule: '123', patient: PATIENT._id }
+  const response = await mutate({ mutation: SCHEDULE, variables: { input } })
+
+  t.not(response.errors, null)
+  t.is(response.data, null)
+  t.is(response.errors[0].message, 'Id do horário não é válido')
+})
+
+test('should throw error if patient id is not valid when schedule', async (t) => {
+  const { mutate } = createTestClient(server)
+  const input = { schedule: AVAILABLE_SCHEDULE._id, patient: '123' }
+  const response = await mutate({ mutation: SCHEDULE, variables: { input } })
+
+  t.not(response.errors, null)
+  t.is(response.data, null)
+  t.is(response.errors[0].message, 'Id do paciente não é válido')
+})
+
 test('should schedule', async (t) => {
   const { mutate } = createTestClient(server)
   const input = { schedule: AVAILABLE_SCHEDULE._id, patient: PATIENT._id }
-  const response = await mutate({ query: SCHEDULE, variables: { input } })
+  const response = await mutate({ mutation: SCHEDULE, variables: { input } })
 
   t.is(response.errors, undefined)
   t.not(response.data, null)
@@ -57,7 +77,7 @@ test('should schedule', async (t) => {
       doctor,
       patient,
       ...schedule,
-      status: ScheduleStatus.SCHEDULED.toUpperCase()
+      status: ScheduleStatus.BOOKED.toUpperCase()
     },
     scheduleResponse
   )
@@ -65,10 +85,30 @@ test('should schedule', async (t) => {
   t.not(scheduledAt, null)
 })
 
+test.only('should throw error if schedule id is not valid when cancel schedule', async (t) => {
+  const { mutate } = createTestClient(server)
+  const input = { schedule: '123', patient: PATIENT._id }
+  const response = await mutate({ mutation: CANCEL_SCHEDULE, variables: { input } })
+
+  t.not(response.errors, null)
+  t.is(response.data, null)
+  t.is(response.errors[0].message, 'Id do horário não é válido')
+})
+
+test.only('should throw error if patient id is not valid when cancel schedule', async (t) => {
+  const { mutate } = createTestClient(server)
+  const input = { schedule: SCHEDULED_SCHEDULE._id, patient: '123' }
+  const response = await mutate({ mutation: CANCEL_SCHEDULE, variables: { input } })
+
+  t.not(response.errors, null)
+  t.is(response.data, null)
+  t.is(response.errors[0].message, 'Id do paciente não é válido')
+})
+
 test('should cancel a schedule', async (t) => {
   const { mutate } = createTestClient(server)
   const input = { schedule: SCHEDULED_SCHEDULE._id, patient: PATIENT._id }
-  const response = await mutate({ query: CANCEL_SCHEDULE, variables: { input } })
+  const response = await mutate({ mutation: CANCEL_SCHEDULE, variables: { input } })
 
   t.is(response.errors, undefined)
   t.not(response.data, null)

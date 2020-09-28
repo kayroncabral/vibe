@@ -1,4 +1,5 @@
 import { differenceInHours } from 'date-fns'
+import { ObjectID } from 'mongodb'
 
 import { Schedule } from 'src/models'
 
@@ -16,6 +17,9 @@ export const createSchedules = async (parent, { input }, context, info) => {
 }
 
 export const schedule = async (parent, { input }, context, info) => {
+  if (!ObjectID.isValid(input.schedule)) throw new Error('Id do horário não é válido')
+  if (!ObjectID.isValid(input.patient)) throw new Error('Id do paciente não é válido')
+
   const schedule = await Schedule.findById(input.schedule)
   if (!schedule) throw new Error('Horário não encontrado')
   if (schedule.status !== ScheduleStatus.AVAILABLE.toUpperCase()) {
@@ -23,7 +27,7 @@ export const schedule = async (parent, { input }, context, info) => {
   }
 
   schedule.patient = input.patient
-  schedule.status = ScheduleStatus.SCHEDULED
+  schedule.status = ScheduleStatus.BOOKED
   schedule.scheduledAt = new Date()
 
   await schedule.save()
@@ -32,11 +36,14 @@ export const schedule = async (parent, { input }, context, info) => {
 }
 
 export const cancelSchedule = async (parent, { input }, context, info) => {
+  if (!ObjectID.isValid(input.schedule)) throw new Error('Id do horário não é válido')
+  if (!ObjectID.isValid(input.patient)) throw new Error('Id do paciente não é válido')
+
   const schedule = await Schedule.findById(input.schedule)
   if (!schedule) throw new Error('Hoário não encontrado')
   if (
     schedule.patient.toString() !== input.patient ||
-    schedule.status !== ScheduleStatus.SCHEDULED.toUpperCase()
+    schedule.status !== ScheduleStatus.BOOKED.toUpperCase()
   ) {
     throw new Error('Não é possível cancelar')
   }

@@ -46,6 +46,7 @@ type Schedule implements Node {
 
 enum ScheduleStatus {
   AVAILABLE
-  SCHEDULED
+  BOOKED
   CANCELED
+  APPOINTMENT_DONE
 }
