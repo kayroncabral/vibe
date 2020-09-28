@@ -4,3 +4,8 @@ export const Paths = Object.freeze({
     label: 'Doctors'
   }
 })
+
+export const Sex = Object.freeze({
+  MALE: 'MALE',
+  FEMALE: 'FEMALE'
+})

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import PropTypes from 'prop-types'
+
 import Avatar from '@material-ui/core/Avatar'
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
@@ -18,9 +20,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
 import Calendar from 'src/components/Calendar'
 
+import { Sex } from 'src/utils/enums'
+
 import useStyles from './styles'
 
-const Doctor = () => {
+const Doctor = ({ doctor }) => {
   const classes = useStyles()
 
   const [expanded, setExpanded] = useState(false)
@@ -28,6 +32,8 @@ const Doctor = () => {
   const handleExpandClick = () => {
     setExpanded(!expanded)
   }
+
+  const prefix = doctor.sex === Sex.MALE ? 'Dr. ' : 'Dra. '
 
   return (
     <Card className={classes.root}>
@@ -38,7 +44,10 @@ const Doctor = () => {
               <Avatar className={classes.avatar} variant='square' />
             </Grid>
             <Grid item xs>
-              <Typography variant='h6'>Dr. Alan Ost</Typography>
+              <Typography variant='h6'>
+                {prefix}
+                {doctor.name}
+              </Typography>
               <Typography color='textSecondary'>
                 Dermatologista (Tratamentos estéticos faciais, Tratamentos
                 estéticos corporais, Queda de cabelo, Psoríase e
@@ -78,7 +87,12 @@ const Doctor = () => {
   )
 }
 
-Doctor.propTypes = {}
+Doctor.propTypes = {
+  doctor: PropTypes.shape({
+    name: PropTypes.string,
+    sex: PropTypes.string
+  })
+}
 
 Doctor.defaultProps = {}
 
