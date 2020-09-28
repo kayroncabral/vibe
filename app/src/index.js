@@ -1,15 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import 'typeface-roboto'
-
+import { ApolloProvider } from '@apollo/client'
+import client from 'src/apollo'
 import * as serviceWorker from 'src/serviceWorker'
 
 import Router from 'src/router'
 
+import 'typeface-roboto'
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <ApolloProvider client={client}>
+      <Router />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
