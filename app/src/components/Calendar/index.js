@@ -1,7 +1,6 @@
 import React from 'react'
 
 import clsx from 'clsx'
-import PropTypes from 'prop-types'
 
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
@@ -69,7 +68,6 @@ const Calendar = () => {
         xs
         spacing={2}
         direction='column'
-        justify='center'
       >
         <Grid container item justify='center'>
           <Grid item xs={12}>
@@ -108,7 +106,6 @@ const Calendar = () => {
         xs
         spacing={2}
         direction='column'
-        justify='center'
       >
         <Grid container item justify='center'>
           <Grid item xs={12}>
@@ -162,6 +159,21 @@ const Calendar = () => {
               1 Out
             </Typography>
           </Grid>
+        </Grid>
+        <Grid container item justify='center'>
+          <Button variant='outlined' color='primary' size='small'>
+            Teste
+          </Button>
+        </Grid>
+        <Grid container item justify='center'>
+          <Button variant='outlined' color='primary' size='small'>
+            Teste
+          </Button>
+        </Grid>
+        <Grid container item justify='center'>
+          <Button variant='outlined' color='primary' size='small'>
+            Teste
+          </Button>
         </Grid>
         <Grid container item justify='center'>
           <Button variant='outlined' color='primary' size='small'>
