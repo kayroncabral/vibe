@@ -1,6 +1,6 @@
-import { createTestClient } from 'apollo-server-integration-testing'
+import { createTestClient } from 'apollo-server-testing'
 import { serial as test } from 'ava'
-import { server as apolloServer } from 'src'
+import { server } from 'src'
 
 import { Doctor, Patient, Schedule } from 'src/models'
 
@@ -21,9 +21,9 @@ test.beforeEach(async (t) => {
 
   await new Doctor(DOCTOR).save()
   await new Patient(PATIENT).save()
-  await new Schedule(AVAILABLE_SCHEDULE).save()
   await new Schedule(SCHEDULED_SCHEDULE).save()
   await new Schedule(CANCELED_SCHEDULE).save()
+  await new Schedule(AVAILABLE_SCHEDULE).save()
 })
 
 test.afterEach.always(async (t) => {
@@ -33,9 +33,9 @@ test.afterEach.always(async (t) => {
 })
 
 test('should get schedules', async (t) => {
-  const { query } = createTestClient({ apolloServer })
+  const { query } = createTestClient(server)
   const input = { doctor: DOCTOR._id }
-  const response = await query(GET_SCHEDULES, { variables: { input } })
+  const response = await query({ query: GET_SCHEDULES, variables: { input } })
 
   t.is(response.errors, undefined)
   t.not(response.data, null)
@@ -43,30 +43,33 @@ test('should get schedules', async (t) => {
   t.is(response.data.schedules.length, 3)
 
   const {
-    _id: canceledScheduleId,
-    doctor: canceledScheduleDoctorData,
-    patient: canceledScheduledPatientData,
-    ...canceledSchedule
-  } = CANCELED_SCHEDULE
-  const { _id: doctorId, ...doctorRest } = DOCTOR
-  const doctor = { id: doctorId, ...doctorRest }
-  const { _id: patientId, ...patientRest } = PATIENT
-  const patient = { id: patientId, ...patientRest }
-  t.deepEqual(
-    { id: canceledScheduleId, doctor, patient, scheduledAt: null, ...canceledSchedule },
-    response.data.schedules[0]
-  )
-
-  const {
     _id: scheduledScheduleId,
     doctor: scheduledScheduleDoctorData,
     patient: scheduledSchedulePatientData,
     ...scheduledSchedule
   } = SCHEDULED_SCHEDULE
+  const { _id: doctorId, ...doctorRest } = DOCTOR
+  const doctor = { id: doctorId, ...doctorRest }
+  const { _id: patientId, ...patientRest } = PATIENT
+  const patient = { id: patientId, ...patientRest }
   t.deepEqual(
     { id: scheduledScheduleId, doctor, patient, canceledAt: null, ...scheduledSchedule },
-    response.data.schedules[1]
+    response.data.schedules[0]
   )
+
+  const {
+    _id: canceledScheduleId,
+    doctor: canceledScheduleDoctorData,
+    patient: canceledScheduledPatientData,
+    canceledAt,
+    ...canceledSchedule
+  } = CANCELED_SCHEDULE
+  const { canceledAt: canceledAtResponse, ...canceledScheduleResponse } = response.data.schedules[1]
+  t.deepEqual(
+    { id: canceledScheduleId, doctor, patient, ...canceledSchedule },
+    canceledScheduleResponse
+  )
+  t.not(canceledAtResponse, null)
 
   const {
     _id: availableScheduleId,

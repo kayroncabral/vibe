@@ -1,6 +1,6 @@
-import { createTestClient } from 'apollo-server-integration-testing'
+import { createTestClient } from 'apollo-server-testing'
 import { serial as test } from 'ava'
-import { server as apolloServer } from 'src'
+import { server } from 'src'
 
 import { Doctor, Patient, Schedule } from 'src/models'
 
@@ -30,9 +30,9 @@ test.afterEach.always(async (t) => {
 })
 
 test('should schedule', async (t) => {
-  const { mutate } = createTestClient({ apolloServer })
+  const { mutate } = createTestClient(server)
   const input = { schedule: AVAILABLE_SCHEDULE._id, patient: PATIENT._id }
-  const response = await mutate(SCHEDULE, { variables: { input } })
+  const response = await mutate({ query: SCHEDULE, variables: { input } })
 
   t.is(response.errors, undefined)
   t.not(response.data, null)
@@ -66,9 +66,9 @@ test('should schedule', async (t) => {
 })
 
 test('should cancel a schedule', async (t) => {
-  const { mutate } = createTestClient({ apolloServer })
+  const { mutate } = createTestClient(server)
   const input = { schedule: SCHEDULED_SCHEDULE._id, patient: PATIENT._id }
-  const response = await mutate(CANCEL_SCHEDULE, { variables: { input } })
+  const response = await mutate({ query: CANCEL_SCHEDULE, variables: { input } })
 
   t.is(response.errors, undefined)
   t.not(response.data, null)

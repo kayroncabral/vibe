@@ -24,7 +24,7 @@ export const schedule = async (parent, { input }, context, info) => {
 
   schedule.patient = input.patient
   schedule.status = ScheduleStatus.SCHEDULED
-  schedule.scheduledAt = Date.now()
+  schedule.scheduledAt = new Date()
 
   await schedule.save()
 
@@ -46,7 +46,7 @@ export const cancelSchedule = async (parent, { input }, context, info) => {
   }
 
   schedule.status = ScheduleStatus.CANCELED
-  schedule.canceleddAt = Date.now()
+  schedule.canceleddAt = new Date()
 
   await schedule.save()
 

@@ -25,5 +25,7 @@ export const schedules = async (parent, { input }, context, info) => {
     }
   }
 
-  return Schedule.find(conditions)
+  const schedules = await Schedule.find(conditions)
+
+  return schedules
 }
