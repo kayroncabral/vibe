@@ -7,21 +7,21 @@ export const schedules = async (parent, { input }, context, info) => {
 
   if (input?.filter?.status) conditions.status = { $in: input.filter.status }
 
-  if (input?.filter?.start || input?.filter?.end) {
-    conditions.date = {}
+  // Default date values
+  conditions.date = {
+    $gte: startOfDay(Date.now()).toISOString(),
+    $lte: endOfDay(Date.now()).toISOString()
+  }
 
+  if (input?.filter?.start || input?.filter?.end) {
     if (input.filter?.start) {
       const start = new Date(input.filter.start)
       conditions.date.$gte = startOfDay(start).toISOString()
-
-      if (!input.filter?.end) conditions.date.$lte = endOfDay(start).toISOString()
     }
 
     if (input.filter?.end) {
       const end = new Date(input.filter.end)
       conditions.date.$lte = endOfDay(end).toISOString()
-
-      if (!input.filter?.start) conditions.date.$gte = startOfDay(end).toISOString()
     }
   }
 

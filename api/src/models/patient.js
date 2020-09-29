@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-import User from 'src/models/user'
+import User from 'src/models/base/user'
 
 import { Roles } from 'src/utils/enums'
 

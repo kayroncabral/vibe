@@ -1,5 +1,5 @@
 const User = {
-  __resolveType(parent, context, info) {
+  __resolveType: (parent, context, info) => {
     if (parent.crm) return 'Doctor'
     if (parent.federalTaxNumber) return 'Patient'
 

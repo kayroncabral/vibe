@@ -9,3 +9,10 @@ export const Sex = Object.freeze({
   MALE: 'MALE',
   FEMALE: 'FEMALE'
 })
+
+export const ScheduleStatus = Object.freeze({
+  AVAILABLE: 'AVAILABLE',
+  BOOKED: 'BOOKED',
+  CANCELED: 'CANCELED',
+  APPOINTMENT_DONE: 'APPOINTMENT_DONE'
+})

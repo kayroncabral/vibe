@@ -20,4 +20,5 @@ type Doctor implements User & Node {
   birthday: String!
   role: String!
   crm: String!
+  schedules: [Schedule!]!
 }

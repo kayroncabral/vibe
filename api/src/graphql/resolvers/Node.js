@@ -1,5 +1,5 @@
 const Node = {
-  __resolveType() {
+  __resolveType: () => {
     return null
   }
 }

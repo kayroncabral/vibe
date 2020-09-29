@@ -34,6 +34,7 @@ const Doctor = ({ doctor }) => {
   }
 
   const prefix = doctor.sex === Sex.MALE ? 'Dr. ' : 'Dra. '
+  const hasSchedules = !!doctor.schedules.length
 
   return (
     <Card className={classes.root}>
@@ -48,38 +49,57 @@ const Doctor = ({ doctor }) => {
                 {prefix}
                 {doctor.name}
               </Typography>
-              <Typography color='textSecondary'>
+              <Typography color='textSecondary' gutterBottom>
                 Dermatologista (Tratamentos estéticos faciais, Tratamentos
                 estéticos corporais, Queda de cabelo, Psoríase e
                 imunobiológico), Especialista em medicina estética (Tricologia,
                 Tratamentos de rugas, Toxina botulínica, Rejuvenescimento)
               </Typography>
-              <Box display='flex'>
+              <Box display='flex' alignItems='center'>
                 <Rating value={5} readOnly />
-                <Typography>108 opiniões</Typography>
+                <Typography variant='caption' color='textSecondary'>
+                  108 opiniões
+                </Typography>
               </Box>
             </Grid>
           </Grid>
           <Grid item>
             <Divider orientation='vertical' />
           </Grid>
-          <Grid container item xs spacing={2} justify='center'>
-            <Collapse in={expanded} collapsedHeight={220}>
-              <CardContent>
-                <Calendar />
-              </CardContent>
-            </Collapse>
-            <Divider light />
-            <CardActions className={classes.actions}>
-              <Button
-                color='primary'
-                size='small'
-                endIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                onClick={handleExpandClick}
-              >
-                {expanded ? 'Mostrar menos' : 'Mostrar mais'}
-              </Button>
-            </CardActions>
+          <Grid
+            container
+            item
+            xs
+            spacing={2}
+            justify='center'
+            alignItems='center'
+          >
+            {hasSchedules ? (
+              <>
+                <Grid container item xs={12}>
+                  <Collapse in={expanded} collapsedHeight={220}>
+                    <CardContent>
+                      <Calendar schedules={doctor.schedules} />
+                    </CardContent>
+                  </Collapse>
+                </Grid>
+                <Divider light />
+                <CardActions className={classes.actions}>
+                  <Button
+                    color='primary'
+                    size='small'
+                    endIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                    onClick={handleExpandClick}
+                  >
+                    {expanded ? 'Mostrar menos' : 'Mostrar mais'}
+                  </Button>
+                </CardActions>
+              </>
+            ) : (
+              <Typography color='textSecondary'>
+                Não há horários dispoíveis
+              </Typography>
+            )}
           </Grid>
         </Grid>
       </CardContent>
@@ -90,7 +110,13 @@ const Doctor = ({ doctor }) => {
 Doctor.propTypes = {
   doctor: PropTypes.shape({
     name: PropTypes.string,
-    sex: PropTypes.string
+    sex: PropTypes.string,
+    schedules: PropTypes.arrayOf(
+      PropTypes.shape({
+        date: PropTypes.string,
+        status: PropTypes.string
+      })
+    )
   })
 }
 

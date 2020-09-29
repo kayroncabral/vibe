@@ -1,4 +1,5 @@
 import Appointment from 'src/graphql/resolvers/Appointment'
+import Doctor from 'src/graphql/resolvers/Doctor'
 import Mutation from 'src/graphql/resolvers/Mutation'
 import Node from 'src/graphql/resolvers/Node'
 import Query from 'src/graphql/resolvers/Query'
@@ -11,7 +12,8 @@ const resolvers = {
   Node,
   User,
   Schedule,
-  Appointment
+  Appointment,
+  Doctor
 }
 
 export default resolvers
