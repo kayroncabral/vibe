@@ -40,7 +40,7 @@ const Doctor = ({ loading, doctor, onSchedule }) => {
     setExpanded(!expanded)
   }
 
-  const prefix = doctor.sex === Sex.MALE ? 'Dr. ' : 'Dra. '
+  const prefix = doctor.sex === Sex.MALE.value ? 'Dr. ' : 'Dra. '
   const hasSchedules = !!doctor.schedules.length
 
   return (

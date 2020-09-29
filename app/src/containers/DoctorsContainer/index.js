@@ -33,8 +33,4 @@ const DoctorsContainer = () => {
   )
 }
 
-DoctorsContainer.propTypes = {}
-
-DoctorsContainer.defaultProps = {}
-
 export default DoctorsContainer

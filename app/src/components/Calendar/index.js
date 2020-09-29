@@ -25,7 +25,7 @@ const Calendar = ({ loading, schedules, onSchedule }) => {
   const groups = groupByDate(schedules, 'date')
 
   const renderSchedule = (schedule, index) => {
-    const booked = schedule.status === ScheduleStatus.BOOKED
+    const booked = schedule.status === ScheduleStatus.BOOKED.value
     const selected = selectedId === schedule.id
 
     return (

@@ -8,3 +8,20 @@ export const SCHEDULE = gql`
     }
   }
 `
+
+export const SCHEDULES = gql`
+  query($input: SchedulesInput!) {
+    schedules(input: $input) {
+      id
+      patient {
+        name
+        sex
+        birthday
+        federalTaxNumber
+      }
+      date
+      status
+      scheduledAt
+    }
+  }
+`
