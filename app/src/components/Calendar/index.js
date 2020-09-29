@@ -50,9 +50,9 @@ const Calendar = ({ loading, schedules, onSchedule }) => {
   const renderDay = (key) => {
     let formatted
     if (isToday(parseISO(key))) {
-      formatted = 'Hoje'
+      formatted = 'Today'
     } else if (isTomorrow(parseISO(key))) {
-      formatted = 'Amanhã'
+      formatted = 'Tomorrow'
     } else {
       formatted = format(parseISO(key), 'eee')
     }

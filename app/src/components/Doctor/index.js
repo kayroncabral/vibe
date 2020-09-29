@@ -24,6 +24,13 @@ import { Sex } from 'src/utils/enums'
 
 import useStyles from './styles'
 
+const formatSpecializations = (specialization) => {
+  const specializations = specialization.subspecializations
+    .map((subspecializations) => subspecializations.name)
+    .join(', ')
+  return `${specialization.name} (${specializations})`
+}
+
 const Doctor = ({ loading, doctor, onSchedule }) => {
   const classes = useStyles()
 
@@ -49,15 +56,19 @@ const Doctor = ({ loading, doctor, onSchedule }) => {
                 {prefix}
                 {doctor.name}
               </Typography>
-              <Typography color='textSecondary' gutterBottom>
-                Dermatologista (Tratamentos estéticos faciais, Tratamentos
-                estéticos corporais, Queda de cabelo, Psoríase e
-                imunobiológico), Especialista em medicina estética (Tricologia,
-                Tratamentos de rugas, Toxina botulínica, Rejuvenescimento)
+              <Typography
+                className={classes.caption}
+                color='textSecondary'
+                gutterBottom
+              >
+                Número de registro: {doctor.crm}
               </Typography>
-              <Box display='flex' alignItems='center'>
+              <Typography color='textSecondary' gutterBottom>
+                {doctor.specializations.map(formatSpecializations).join(', ')}
+              </Typography>
+              <Box display='flex' alignItems='flex-end'>
                 <Rating value={5} readOnly />
-                <Typography variant='caption' color='textSecondary'>
+                <Typography className={classes.caption} color='textSecondary'>
                   108 opiniões
                 </Typography>
               </Box>
@@ -118,6 +129,17 @@ Doctor.propTypes = {
   doctor: PropTypes.shape({
     name: PropTypes.string,
     sex: PropTypes.string,
+    crm: PropTypes.string,
+    specializations: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+        subspecializations: PropTypes.arrayOf(
+          PropTypes.shape({
+            name: PropTypes.string
+          })
+        )
+      })
+    ),
     schedules: PropTypes.arrayOf(
       PropTypes.shape({
         date: PropTypes.string,

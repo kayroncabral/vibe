@@ -11,6 +11,16 @@ input CreateDoctorInput {
   sex: Sex!
   birthday: Date!
   crm: String!
+  specializations: [SpecializationInput!]!
+}
+
+input SpecializationInput {
+  name: String!
+  subspecializations: [SubspecializationInput!]!
+}
+
+input SubspecializationInput {
+  name: String!
 }
 
 type Doctor implements User & Node {
@@ -20,5 +30,15 @@ type Doctor implements User & Node {
   birthday: String!
   role: String!
   crm: String!
+  specializations: [Specialization!]!
   schedules: [Schedule!]!
+}
+
+type Specialization {
+  name: String!
+  subspecializations: [Subspecialization!]!
+}
+
+type Subspecialization {
+  name: String!
 }

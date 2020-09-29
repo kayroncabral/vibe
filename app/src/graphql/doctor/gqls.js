@@ -6,6 +6,13 @@ export const DOCTORS = gql`
       id
       name
       sex
+      crm
+      specializations {
+        name
+        subspecializations {
+          name
+        }
+      }
       schedules {
         id
         date

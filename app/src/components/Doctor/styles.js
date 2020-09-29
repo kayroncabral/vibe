@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7),
     height: theme.spacing(7)
   },
+  caption: {
+    fontSize: 12
+  },
   actions: {
     display: 'flex',
     justifyContent: 'center'
