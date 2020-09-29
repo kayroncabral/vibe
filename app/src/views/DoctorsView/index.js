@@ -2,27 +2,36 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-import CircularProgress from '@material-ui/core/CircularProgress'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 
 import Doctor from 'src/components/Doctor'
+import Loading from 'src/components/Loading'
 
 import useStyles from 'src/views/DoctorsView/styles'
 
-const DoctorsView = ({ loading, doctors }) => {
+const DoctorsView = ({
+  doctorsLoading,
+  scheduleLoading,
+  doctors,
+  onSchedule
+}) => {
   const classes = useStyles()
 
   const renderDoctor = (doctor) => (
     <Grid key={doctor.id} item>
-      <Doctor doctor={doctor} />
+      <Doctor
+        loading={scheduleLoading}
+        doctor={doctor}
+        onSchedule={onSchedule}
+      />
     </Grid>
   )
 
   return (
     <Container className={classes.root} maxWidth='md'>
-      {loading ? (
-        <CircularProgress />
+      {doctorsLoading ? (
+        <Loading />
       ) : (
         <Grid container spacing={2}>
           {doctors.map(renderDoctor)}
@@ -33,14 +42,18 @@ const DoctorsView = ({ loading, doctors }) => {
 }
 
 DoctorsView.propTypes = {
-  loading: PropTypes.bool,
+  doctorsLoading: PropTypes.bool,
+  scheduleLoading: PropTypes.bool,
   doctors: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string
     })
-  )
+  ),
+  onSchedule: PropTypes.func
 }
 
-DoctorsView.defaultProps = {}
+DoctorsView.defaultProps = {
+  onSchedule: () => {}
+}
 
 export default DoctorsView

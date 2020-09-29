@@ -24,7 +24,7 @@ import { Sex } from 'src/utils/enums'
 
 import useStyles from './styles'
 
-const Doctor = ({ doctor }) => {
+const Doctor = ({ loading, doctor, onSchedule }) => {
   const classes = useStyles()
 
   const [expanded, setExpanded] = useState(false)
@@ -76,14 +76,20 @@ const Doctor = ({ doctor }) => {
           >
             {hasSchedules ? (
               <>
-                <Grid container item xs={12}>
+                <Grid item xs={12}>
                   <Collapse in={expanded} collapsedHeight={220}>
                     <CardContent>
-                      <Calendar schedules={doctor.schedules} />
+                      <Calendar
+                        loading={loading}
+                        schedules={doctor.schedules}
+                        onSchedule={onSchedule}
+                      />
                     </CardContent>
                   </Collapse>
                 </Grid>
-                <Divider light />
+                <Grid item xs={12}>
+                  <Divider light />
+                </Grid>
                 <CardActions className={classes.actions}>
                   <Button
                     color='primary'
@@ -108,6 +114,7 @@ const Doctor = ({ doctor }) => {
 }
 
 Doctor.propTypes = {
+  loading: PropTypes.bool,
   doctor: PropTypes.shape({
     name: PropTypes.string,
     sex: PropTypes.string,
@@ -117,9 +124,12 @@ Doctor.propTypes = {
         status: PropTypes.string
       })
     )
-  })
+  }),
+  onSchedule: PropTypes.func
 }
 
-Doctor.defaultProps = {}
+Doctor.defaultProps = {
+  onSchedule: () => {}
+}
 
 export default Doctor

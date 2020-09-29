@@ -10,11 +10,9 @@ import Router from 'src/router'
 import 'typeface-roboto'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ApolloProvider client={client}>
-      <Router />
-    </ApolloProvider>
-  </React.StrictMode>,
+  <ApolloProvider client={client}>
+    <Router />
+  </ApolloProvider>,
   document.getElementById('root')
 )
 

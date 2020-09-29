@@ -1,25 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import clsx from 'clsx'
 import { isToday, isTomorrow, parseISO, format } from 'date-fns'
 import PropTypes from 'prop-types'
 
-import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
+import Button from 'src/components/Button'
 import useStyles from 'src/components/Calendar/styles'
 
 import { groupByDate } from 'src/utils/date'
 import { ScheduleStatus } from 'src/utils/enums'
 
-const Calendar = ({ schedules }) => {
+const Calendar = ({ loading, schedules, onSchedule }) => {
   const classes = useStyles()
+  const [selectedId, setSelectedId] = useState()
+
+  const handleSchedule = (schedule) => (event) => {
+    setSelectedId(schedule.id)
+    onSchedule(schedule)
+  }
 
   const groups = groupByDate(schedules, 'date')
 
-  const renderSchedule = (shcedule, index) => {
-    const booked = shcedule.status === ScheduleStatus.BOOKED
+  const renderSchedule = (schedule, index) => {
+    const booked = schedule.status === ScheduleStatus.BOOKED
+    const selected = selectedId === schedule.id
 
     return (
       <Grid key={index} container item justify='center'>
@@ -30,9 +37,11 @@ const Calendar = ({ schedules }) => {
           variant={booked ? 'text' : 'outlined'}
           color='primary'
           size='small'
+          loading={selected && loading}
           disabled={booked}
+          onClick={handleSchedule(schedule)}
         >
-          {format(parseISO(shcedule.date), 'HH:mm')}
+          {format(parseISO(schedule.date), 'HH:mm')}
         </Button>
       </Grid>
     )
@@ -85,14 +94,19 @@ const Calendar = ({ schedules }) => {
 }
 
 Calendar.propTypes = {
+  loading: PropTypes.bool,
   schedules: PropTypes.arrayOf(
     PropTypes.shape({
       date: PropTypes.string,
       status: PropTypes.string
     })
-  )
+  ),
+  onSchedule: PropTypes.func
 }
 
-Calendar.defaultProps = {}
+Calendar.defaultProps = {
+  loading: false,
+  onSchedule: () => {}
+}
 
 export default Calendar
