@@ -5,6 +5,7 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker
 } from '@material-ui/pickers'
+import { format } from 'date-fns'
 import PropTypes from 'prop-types'
 
 import Button from '@material-ui/core/Button'
@@ -19,13 +20,15 @@ import { ScheduleStatus } from 'src/utils/enums'
 
 import useStyles from './styles'
 
+const now = format(new Date(), 'yyyy-MM-dd')
+
 const Filter = ({ onApply }) => {
   const classes = useStyles()
 
   const [filter, setFilter] = useState({
     name: '',
-    start: new Date(),
-    end: new Date(),
+    start: now,
+    end: now,
     status: ''
   })
 

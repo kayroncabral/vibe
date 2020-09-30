@@ -1,12 +1,13 @@
 import React from 'react'
 
 import { useQuery } from '@apollo/client'
+import { format } from 'date-fns'
 
 import SchedulesView from 'src/views/SchedulesView'
 
 import { SCHEDULES } from 'src/graphql/schedule/gqls'
 
-const now = new Date().toISOString()
+const now = format(new Date(), 'yyyy-MM-dd')
 
 const SchedulesContainer = () => {
   const { loading, data, refetch } = useQuery(SCHEDULES, {

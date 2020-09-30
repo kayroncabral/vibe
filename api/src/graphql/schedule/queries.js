@@ -1,4 +1,4 @@
-import { parseISO, startOfDay, endOfDay } from 'date-fns'
+import { startOfDay, endOfDay } from 'date-fns'
 
 import { Schedule } from 'src/models'
 
@@ -11,11 +11,11 @@ export const schedules = async (parent, { input }, context, info) => {
     conditions.date = {}
 
     if (input.filter?.start) {
-      conditions.date.$gte = startOfDay(parseISO(input.filter.start))
+      conditions.date.$gte = startOfDay(new Date(input.filter.start)).toISOString()
     }
 
     if (input.filter?.end) {
-      conditions.date.$lte = endOfDay(parseISO(input.filter.end))
+      conditions.date.$lte = endOfDay(new Date(input.filter.end)).toISOString()
     }
   }
 
