@@ -67,6 +67,7 @@ const formatDate = (date) => {
 
 const Schedule = ({
   schedule,
+  doctor,
   cancelScheduleLoading,
   missingPatientLoading,
   onCancel,
@@ -235,7 +236,7 @@ const Schedule = ({
                 Ausente
               </Button>
             )}
-            {onAppointment && (
+            {onAppointment && doctor && (
               <Button
                 variant='contained'
                 color='primary'
@@ -280,6 +281,7 @@ Schedule.propTypes = {
     }),
     status: PropTypes.string
   }),
+  doctor: PropTypes.bool,
   missingPatientLoading: PropTypes.bool,
   cancelScheduleLoading: PropTypes.bool,
   onCancel: PropTypes.func,

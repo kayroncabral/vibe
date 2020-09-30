@@ -19,6 +19,7 @@ const SchedulesView = ({
   missingPatientLoading,
   createAppointmentLoading,
   schedules,
+  doctor,
   onFilterApply,
   onMissingPatient,
   onCancelSchedule,
@@ -48,6 +49,7 @@ const SchedulesView = ({
     <Grid key={schedule.id} item xs={12}>
       <Schedule
         schedule={schedule}
+        doctor={doctor}
         cancelScheduleLoading={cancelScheduleLoading}
         missingPatientLoading={missingPatientLoading}
         onMissing={onMissingPatient}
@@ -105,6 +107,7 @@ SchedulesView.propTypes = {
       status: PropTypes.string
     })
   ),
+  doctor: PropTypes.bool,
   onFilterApply: PropTypes.func,
   onMissingPatient: PropTypes.func,
   onCancelSchedule: PropTypes.func,
@@ -115,7 +118,8 @@ SchedulesView.defaultProps = {
   schedulesLoading: false,
   cancelScheduleLoading: false,
   missingPatientLoading: false,
-  createAppointmentLoading: false
+  createAppointmentLoading: false,
+  doctor: true
 }
 
 export default SchedulesView

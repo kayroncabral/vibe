@@ -17,7 +17,8 @@ const SchedulesContainer = () => {
         filter: { start: now, end: now, status: null }
       }
     },
-    notifyOnNetworkStatusChange: true
+    notifyOnNetworkStatusChange: true,
+    fetchPolicy: 'network-only'
   })
   const [missingPatient, { loading: missingPatientLoading }] = useMutation(
     MISSING_PATIENT
@@ -26,16 +27,7 @@ const SchedulesContainer = () => {
     createAppointment,
     { loading: createAppointmentLoading }
   ] = useMutation(CREATE_APPOINTMENT, {
-    refetchQueries: [
-      {
-        query: SCHEDULES,
-        variables: {
-          input: {
-            filter: { start: now, end: now, status: null }
-          }
-        }
-      }
-    ]
+    refetchQueries: [{ query: SCHEDULES }]
   })
 
   const handleFilterApply = async (filter) => {

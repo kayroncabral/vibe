@@ -30,6 +30,7 @@ const MySchedulesContainer = () => {
       cancelScheduleLoading={cancelScheduleLoading}
       schedules={data?.schedules ?? []}
       onCancelSchedule={handleCancelSchedule}
+      doctor={false}
     />
   )
 }

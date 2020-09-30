@@ -5,8 +5,8 @@ import { Schedule } from 'src/models'
 
 import { ScheduleStatus } from 'src/utils/enums'
 
-export const createSchedules = async (parent, { input }, context, info) => {
-  const schedulesInput = input.dates.map((date) => ({ doctor: input.doctor, date }))
+export const createSchedules = async (parent, { input }, { user }, info) => {
+  const schedulesInput = input.dates.map((date) => ({ doctor: user.id, date }))
 
   const schedules = await Schedule.insertMany(schedulesInput)
 
