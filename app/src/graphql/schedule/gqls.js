@@ -9,6 +9,15 @@ export const SCHEDULE = gql`
   }
 `
 
+export const MISSING_PATIENT = gql`
+  mutation($input: MissingPatientInput!) {
+    missingPatient(input: $input) {
+      id
+      status
+    }
+  }
+`
+
 export const SCHEDULES = gql`
   query($input: SchedulesInput!) {
     schedules(input: $input) {

@@ -18,5 +18,6 @@ export const ScheduleStatus = Object.freeze({
   AVAILABLE: { value: 'AVAILABLE', label: 'Disponível' },
   BOOKED: { value: 'BOOKED', label: 'Agendado' },
   CANCELED: { value: 'CANCELED', label: 'Cancelado' },
-  APPOINTMENT_DONE: { value: 'APPOINTMENT_DONE', label: 'Consulta realizada' }
+  APPOINTMENT_DONE: { value: 'APPOINTMENT_DONE', label: 'Consulta realizada' },
+  MISSED: { value: 'MISSED', label: 'Falta' }
 })

@@ -2,7 +2,8 @@ export const ScheduleStatus = Object.freeze({
   AVAILABLE: 'available',
   BOOKED: 'booked',
   CANCELED: 'canceled',
-  APPOINTMENT_DONE: 'appointment_done'
+  APPOINTMENT_DONE: 'appointment_done',
+  MISSED: 'missed'
 })
 
 export const Sex = Object.freeze({

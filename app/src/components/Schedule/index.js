@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 
 import Avatar from '@material-ui/core/Avatar'
 import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
@@ -21,6 +20,8 @@ import EventIcon from '@material-ui/icons/Event'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import WcIcon from '@material-ui/icons/Wc'
+
+import Button from 'src/components/Button'
 
 import { ScheduleStatus, Sex } from 'src/utils/enums'
 
@@ -59,9 +60,10 @@ const formatDate = (date) => {
 }
 
 const Schedule = ({
-  loading,
   schedule,
+  missingPatientLoading,
   onSchedule,
+  onMissing,
   onAppointment,
   onAppointmentSubmit
 }) => {
@@ -71,6 +73,14 @@ const Schedule = ({
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
+  }
+
+  const handleMissing = (event) => {
+    onMissing(schedule)
+  }
+
+  const handleCreateAppointment = (event) => {
+    onAppointment(schedule)
   }
 
   const booked = schedule.status === ScheduleStatus.BOOKED.value
@@ -179,14 +189,25 @@ const Schedule = ({
         })}
       >
         {booked && (
-          <Button
-            variant='outlined'
-            color='primary'
-            size='small'
-            onClick={onAppointment}
-          >
-            Iniciar consulta
-          </Button>
+          <>
+            <Button
+              variant='outlined'
+              color='secondary'
+              size='small'
+              loading={missingPatientLoading}
+              onClick={handleMissing}
+            >
+              Ausente
+            </Button>
+            <Button
+              variant='contained'
+              color='primary'
+              size='small'
+              onClick={handleCreateAppointment}
+            >
+              Iniciar consulta
+            </Button>
+          </>
         )}
         {appointmentDone && (
           <Button
@@ -204,7 +225,6 @@ const Schedule = ({
 }
 
 Schedule.propTypes = {
-  loading: PropTypes.bool,
   schedule: PropTypes.shape({
     date: PropTypes.string,
     patient: PropTypes.shape({
@@ -219,13 +239,17 @@ Schedule.propTypes = {
     }),
     status: PropTypes.string
   }),
+  missingPatientLoading: PropTypes.bool,
   onSchedule: PropTypes.func,
+  onMissing: PropTypes.func,
   onAppointment: PropTypes.func,
   onAppointmentSubmit: PropTypes.func
 }
 
 Schedule.defaultProps = {
+  missingPatientLoading: false,
   onSchedule: () => {},
+  onMissing: () => {},
   onAppointment: () => {},
   onAppointmentSubmit: () => {}
 }

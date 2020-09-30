@@ -46,6 +46,12 @@ const Filter = ({ onApply }) => {
     onApply(validatedFilter)
   }
 
+  const renderMenuItem = (key) => (
+    <MenuItem key={key} value={ScheduleStatus[key].value}>
+      {ScheduleStatus[key].label}
+    </MenuItem>
+  )
+
   return (
     <Grid
       className={classes.root}
@@ -73,18 +79,7 @@ const Filter = ({ onApply }) => {
             <MenuItem value=''>
               <em>Nenhum</em>
             </MenuItem>
-            <MenuItem value={ScheduleStatus.AVAILABLE.value}>
-              {ScheduleStatus.AVAILABLE.label}
-            </MenuItem>
-            <MenuItem value={ScheduleStatus.BOOKED.value}>
-              {ScheduleStatus.BOOKED.label}
-            </MenuItem>
-            <MenuItem value={ScheduleStatus.CANCELED.value}>
-              {ScheduleStatus.CANCELED.label}
-            </MenuItem>
-            <MenuItem value={ScheduleStatus.APPOINTMENT_DONE.value}>
-              {ScheduleStatus.APPOINTMENT_DONE.label}
-            </MenuItem>
+            {Object.keys(ScheduleStatus).map(renderMenuItem)}
           </Select>
         </FormControl>
       </Grid>

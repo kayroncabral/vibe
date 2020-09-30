@@ -15,9 +15,11 @@ import useStyles from 'src/views/SchedulesView/styles'
 
 const SchedulesView = ({
   schedulesLoading,
+  missingPatientLoading,
   createAppointmentLoading,
   schedules,
   onFilterApply,
+  onMissingPatient,
   onCreateAppointment
 }) => {
   const classes = useStyles()
@@ -25,7 +27,7 @@ const SchedulesView = ({
   const [selectedSchedule, setSelectedSchedule] = useState(null)
   const [createAppointmentOpen, setCreateAppointmentOpen] = useState(false)
 
-  const handleCreateAppointmentOpen = (schedule) => () => {
+  const handleCreateAppointmentOpen = (schedule) => {
     setSelectedSchedule(schedule)
     setCreateAppointmentOpen(true)
   }
@@ -33,6 +35,10 @@ const SchedulesView = ({
   const handleCreateAppointmentClose = () => {
     setSelectedSchedule(null)
     setCreateAppointmentOpen(false)
+  }
+
+  const handleMissingPatient = (schedule) => {
+    onMissingPatient(schedule)
   }
 
   const handleCreateAppointmentSubmit = async (appointment) => {
@@ -44,7 +50,9 @@ const SchedulesView = ({
     <Grid key={schedule.id} item xs={12}>
       <Schedule
         schedule={schedule}
-        onAppointment={handleCreateAppointmentOpen(schedule)}
+        missingPatientLoading={missingPatientLoading}
+        onMissing={handleMissingPatient}
+        onAppointment={handleCreateAppointmentOpen}
       />
     </Grid>
   )
@@ -83,6 +91,7 @@ const SchedulesView = ({
 
 SchedulesView.propTypes = {
   schedulesLoading: PropTypes.bool,
+  missingPatientLoading: PropTypes.bool,
   createAppointmentLoading: PropTypes.bool,
   schedules: PropTypes.arrayOf(
     PropTypes.shape({
@@ -94,13 +103,16 @@ SchedulesView.propTypes = {
     })
   ),
   onFilterApply: PropTypes.func,
+  onMissingPatient: PropTypes.func,
   onCreateAppointment: PropTypes.func
 }
 
 SchedulesView.defaultProps = {
   schedulesLoading: false,
+  missingPatientLoading: false,
   createAppointmentLoading: false,
   onFilterApply: () => {},
+  onMissingPatient: () => {},
   onCreateAppointment: () => {}
 }
 

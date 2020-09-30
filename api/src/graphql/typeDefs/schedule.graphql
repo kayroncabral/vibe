@@ -6,6 +6,7 @@ extend type Mutation {
   createSchedules(input: CreateSchedulesInput!): [Schedule!]!
 
   schedule(input: ScheduleInput!): Schedule!
+  missingPatient(input: MissingPatientInput!): Schedule!
   cancelSchedule(input: CancelScheduleInput!): Schedule!
 }
 
@@ -31,6 +32,11 @@ input ScheduleInput {
   patient: ID!
 }
 
+input MissingPatientInput {
+  schedule: ID!
+  doctor: ID!
+}
+
 input CancelScheduleInput {
   schedule: ID!
   patient: ID!
@@ -52,4 +58,5 @@ enum ScheduleStatus {
   BOOKED
   CANCELED
   APPOINTMENT_DONE
+  MISSED
 }
