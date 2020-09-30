@@ -80,4 +80,4 @@ Parar o container vibe_api usando o comando
 
 Executar o comando
 
-`yarn test
+`cd api && yarn test`
