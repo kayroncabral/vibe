@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 import Filter from 'src/components/Filter'
 import Loading from 'src/components/Loading'
@@ -20,6 +21,8 @@ const SchedulesView = ({ loading, schedules, onFilterApply }) => {
     </Grid>
   )
 
+  const hasSchedules = !!schedules.length
+
   return (
     <div className={classes.root}>
       <Container maxWidth='md'>
@@ -29,8 +32,14 @@ const SchedulesView = ({ loading, schedules, onFilterApply }) => {
         {loading ? (
           <Loading />
         ) : (
-          <Grid container spacing={2}>
-            {schedules.map(renderSchedule)}
+          <Grid container spacing={2} justify='center' alignItems='center'>
+            {hasSchedules ? (
+              schedules.map(renderSchedule)
+            ) : (
+              <Typography color='textSecondary' aling='center'>
+                Não há consultas
+              </Typography>
+            )}
           </Grid>
         )}
       </Container>
