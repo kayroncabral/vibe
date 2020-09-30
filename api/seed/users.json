@@ -1,0 +1,212 @@
+[{
+  "_id": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "schedules": [],
+  "role": "doctor",
+  "name": "Luoril Zeicepon",
+  "sex": "male",
+  "birthday": "1981-10-10",
+  "crm": "192511",
+  "specializations": [
+    {
+      "name": "Dermatologista",
+      "subspecializations": [
+        {
+          "name": "Tratamentos estéticos faciais"
+        },
+        {
+          "name": "Tratamentos estéticos corporais"
+        },
+        {
+          "name": "Queda de cabelo"
+        },
+        {
+          "name": "Psoríase e imunobiológico"
+        },
+        {
+          "name": "Cirurgia ginecológica"
+        }
+      ]
+    },
+    {
+      "name": "Especialista em medicina estética",
+      "subspecializations": [
+        {
+          "name": "Tricologia"
+        },
+        {
+          "name": "Tratamentos de rugas"
+        },
+        {
+          "name": "Toxina botulínica"
+        },
+        {
+          "name": "Rejuvenescimento"
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2020-09-29T14:45:13.950Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T14:45:13.950Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "schedules": [],
+  "role": "doctor",
+  "name": "Adaninndîr Gilel",
+  "sex": "female",
+  "birthday": "1984-12-22",
+  "crm": "024796",
+  "specializations": [
+    {
+      "name": "Psicólogo",
+      "subspecializations": [
+        {
+          "name": "Terapia de casal"
+        },
+        {
+          "name": "Psicologia clínica"
+        },
+        {
+          "name": "Emergências psicológicas"
+        },
+        {
+          "name": "Dependência afetiva"
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2020-09-29T14:48:35.924Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T14:48:35.924Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "schedules": [],
+  "role": "doctor",
+  "name": "Olfidi Anceo",
+  "sex": "male",
+  "birthday": "1984-07-04",
+  "crm": "351121",
+  "specializations": [
+    {
+      "name": "Ortopedista - Traumatologista",
+      "subspecializations": [
+        {
+          "name": "Prótese de quadril"
+        },
+        {
+          "name": "Cirurgia do quadril"
+        },
+        {
+          "name": "Artroscopia"
+        },
+        {
+          "name": "Fisiologia do exercício"
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2020-09-29T14:51:27.087Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T14:51:27.087Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "schedules": [],
+  "role": "doctor",
+  "name": "Beinsei Thurinnaexe",
+  "sex": "female",
+  "birthday": "1985-09-26",
+  "crm": "037819",
+  "specializations": [
+    {
+      "name": "Médico clínico geral",
+      "subspecializations": [
+        {
+          "name": "Vacinação"
+        },
+        {
+          "name": "Medicina preventiva"
+        },
+        {
+          "name": "Atestado médico"
+        },
+        {
+          "name": "Atenção primária à saúde"
+        }
+      ]
+    },
+    {
+      "name": "Reumatologista",
+      "subspecializations": [
+        {
+          "name": "Reumatologia adulto"
+        },
+        {
+          "name": "Osteoporose"
+        },
+        {
+          "name": "Dor"
+        },
+        {
+          "name": "Artrite reumatoide"
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2020-09-29T14:53:54.750Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T14:53:54.750Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "role": "patient",
+  "name": "Inaya Harmon",
+  "sex": "male",
+  "birthday": "1967-12-06",
+  "createdAt": {
+    "$date": "2020-09-29T15:01:31.473Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:01:31.473Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f744afb739f4c0058fd2b74"
+  },
+  "role": "patient",
+  "name": "Weais Agromgog",
+  "sex": "male",
+  "birthday": "2000-03-31",
+  "createdAt": {
+    "$date": "2020-09-30T09:08:11.832Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:08:11.832Z"
+  },
+  "__v": 0
+}]

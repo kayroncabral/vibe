@@ -10,7 +10,9 @@
   "scripts": {
     "start": "babel-node src/index.js",
     "dev": "env-cmd -f ./development.env nodemon --exec babel-node src/index.js",
-    "test": "env-cmd -f ./test.env ava --serial"
+    "test": "env-cmd -f ./test.env ava --serial",
+    "mongo:seed": "./seed.sh",
+    "mongo:reset": "./resetDatabase.sh"
   },
   "dependencies": {
     "apollo-server-express": "^2.18.1",

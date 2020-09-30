@@ -1,0 +1,2689 @@
+[{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434cc"
+  },
+  "status": "appointment_done",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-29T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.006Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T03:51:45.576Z"
+  },
+  "patient": {
+    "$oid": "5f73abce5647ef003cb0d83e"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:25.144Z"
+  },
+  "appointment": {
+    "$oid": "5f7400d1f8531801ff9d093b"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434cd"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-29T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.007Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.007Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434ce"
+  },
+  "status": "appointment_done",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-29T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.007Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T03:52:18.805Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:28.094Z"
+  },
+  "appointment": {
+    "$oid": "5f7400f2f8531801ff9d093c"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434cf"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-29T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.008Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.008Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d0"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-30T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.008Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.008Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d1"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-30T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.008Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.008Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d2"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-30T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.009Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.009Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d3"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-09-30T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.009Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.009Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d4"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-01T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.010Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.010Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d5"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-01T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.012Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:29.392Z"
+  },
+  "patient": {
+    "$oid": "5f73abce5647ef003cb0d83e"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:29.391Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d6"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-01T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.014Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.014Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d7"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-01T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.015Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.015Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d8"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-02T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.019Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.019Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434d9"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-02T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.043Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.043Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434da"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-02T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.043Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.043Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734ca1771a8e07a89434db"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-02T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:02:58.062Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:02:58.062Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434dc"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-29T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.599Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.599Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434dd"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-29T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.599Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:35.761Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:35.760Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434de"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-29T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.599Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:36.333Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:36.332Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434df"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-29T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e0"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-30T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e1"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-30T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e2"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-30T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e3"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-09-30T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.600Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e4"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-01T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:33.800Z"
+  },
+  "patient": {
+    "$oid": "5f73abce5647ef003cb0d83e"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:33.799Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e5"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-01T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e6"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-01T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e7"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-01T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:34.560Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:34.555Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e8"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-02T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.601Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434e9"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-02T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.602Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.602Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434ea"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-02T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.602Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.602Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cb5771a8e07a89434eb"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-02T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:17.602Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:17.602Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434ec"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-29T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.432Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:43.240Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:43.237Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434ed"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-29T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.433Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.433Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434ee"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-29T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.433Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.433Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434ef"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-29T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.435Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.435Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f0"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-30T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.435Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:43.975Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:43.975Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f1"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-30T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.435Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.435Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f2"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-30T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.436Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.436Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f3"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-09-30T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.437Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.437Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f4"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-01T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.438Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.438Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f5"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-01T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.440Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.440Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f6"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-01T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.442Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.442Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f7"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-01T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.446Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.446Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f8"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-02T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.447Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:45.275Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:45.274Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434f9"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-02T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.454Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.454Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434fa"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-02T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.455Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.455Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cc5771a8e07a89434fb"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-02T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:33.456Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:33.456Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a89434fc"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-29T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.591Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:47.305Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:47.304Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a89434fd"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-29T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.591Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:47.844Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:47.843Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a89434fe"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-29T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.591Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:48.355Z"
+  },
+  "patient": {
+    "$oid": "5f73abce5647ef003cb0d83e"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:48.355Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a89434ff"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-29T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.592Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.592Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943500"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-30T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.617Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.617Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943501"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-30T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.622Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.622Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943502"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-30T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.627Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.627Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943503"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-09-30T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.628Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:51.856Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:51.848Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943504"
+  },
+  "status": "booked",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-01T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.632Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:04:55.204Z"
+  },
+  "patient": {
+    "$oid": "5f734c4b771a8e07a89434ca"
+  },
+  "scheduledAt": {
+    "$date": "2020-09-29T15:04:55.203Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943505"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-01T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.635Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.635Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943506"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-01T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.657Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.657Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943507"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-01T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.664Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.664Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943508"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-02T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.673Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.673Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a8943509"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-02T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.674Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.674Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a894350a"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-02T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.675Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.675Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f734cd1771a8e07a894350b"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-02T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-29T15:03:45.675Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-29T15:03:45.675Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9368"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-03T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.444Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.444Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9369"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-03T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.499Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.499Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e936a"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-03T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.499Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.499Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e936b"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-03T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.500Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.500Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e936c"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-04T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.500Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.500Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e936d"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-04T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.500Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.500Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e936e"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-04T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e936f"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-04T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9370"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-05T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9371"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-05T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.501Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9372"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-05T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9373"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-05T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9374"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-06T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9375"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-06T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.502Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9376"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-06T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.503Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.503Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9377"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-06T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.503Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.503Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9378"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-07T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.503Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.503Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e9379"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-07T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.504Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.504Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e937a"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-07T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.505Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.505Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744ced1d4b1500907e937b"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734879771a8e07a89434c6"
+  },
+  "date": {
+    "$date": "2020-10-07T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:16:29.506Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:16:29.506Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e937c"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-03T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.377Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.377Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e937d"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-03T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.378Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.378Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e937e"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-03T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.378Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.378Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e937f"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-03T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.379Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.379Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9380"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-04T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.379Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.379Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9381"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-04T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.381Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.381Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9382"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-04T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.382Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.382Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9383"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-04T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.386Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.386Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9384"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-05T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.390Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.390Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9385"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-05T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.397Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.397Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9386"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-05T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.398Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.398Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9387"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-05T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.415Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.415Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9388"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-06T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.415Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.415Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e9389"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-06T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.416Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.416Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e938a"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-06T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.417Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.417Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e938b"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-06T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.425Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.425Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e938c"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-07T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.434Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.434Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e938d"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-07T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.434Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.434Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e938e"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-07T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.435Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.435Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d161d4b1500907e938f"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734943771a8e07a89434c7"
+  },
+  "date": {
+    "$date": "2020-10-07T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:10.435Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:10.435Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9390"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-03T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.061Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.061Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9391"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-03T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.071Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.071Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9392"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-03T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.073Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.073Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9393"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-03T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.090Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.090Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9394"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-04T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.114Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.114Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9395"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-04T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.116Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.116Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9396"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-04T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.119Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.119Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9397"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-04T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.120Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.120Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9398"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-05T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.122Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.122Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e9399"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-05T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.125Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.125Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e939a"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-05T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.128Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.128Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e939b"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-05T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.133Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.133Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e939c"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-06T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.134Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.134Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e939d"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-06T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.135Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.135Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e939e"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-06T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.135Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.135Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e939f"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-06T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.135Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.135Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e93a0"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-07T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.136Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.136Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e93a1"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-07T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.136Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.136Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e93a2"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-07T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.136Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.136Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d281d4b1500907e93a3"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f7349ef771a8e07a89434c8"
+  },
+  "date": {
+    "$date": "2020-10-07T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:29.137Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:29.137Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93a4"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-03T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:48.990Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:48.990Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93a5"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-03T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.012Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.012Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93a6"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-03T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.020Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.020Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93a7"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-03T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.023Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.023Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93a8"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-04T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.024Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.024Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93a9"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-04T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.024Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.024Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93aa"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-04T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.025Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.025Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93ab"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-04T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.026Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.026Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93ac"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-05T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.029Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.029Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93ad"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-05T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.042Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.042Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93ae"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-05T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.048Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.048Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93af"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-05T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.056Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.056Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b0"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-06T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.066Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.066Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b1"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-06T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.069Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.069Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b2"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-06T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.089Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.089Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b3"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-06T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.090Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.090Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b4"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-07T13:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.128Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.128Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b5"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-07T14:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.176Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.176Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b6"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-07T15:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.176Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.176Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f744d3c1d4b1500907e93b7"
+  },
+  "status": "available",
+  "doctor": {
+    "$oid": "5f734a82771a8e07a89434c9"
+  },
+  "date": {
+    "$date": "2020-10-07T16:00:00Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-09-30T09:17:49.177Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-30T09:17:49.177Z"
+  }
+}]
