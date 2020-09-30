@@ -14,7 +14,6 @@ const SchedulesContainer = () => {
   const { loading: schedulesLoading, data, refetch } = useQuery(SCHEDULES, {
     variables: {
       input: {
-        doctor: '5f734879771a8e07a89434c6',
         filter: { start: now, end: now, status: null }
       }
     },
@@ -32,7 +31,6 @@ const SchedulesContainer = () => {
         query: SCHEDULES,
         variables: {
           input: {
-            doctor: '5f734879771a8e07a89434c6',
             filter: { start: now, end: now, status: null }
           }
         }
@@ -41,7 +39,7 @@ const SchedulesContainer = () => {
   })
 
   const handleFilterApply = async (filter) => {
-    const variables = { input: { doctor: '5f734879771a8e07a89434c6', filter } }
+    const variables = { input: { filter } }
 
     try {
       await refetch(variables)
@@ -51,9 +49,7 @@ const SchedulesContainer = () => {
   }
 
   const handleMissingPatient = async (schedule) => {
-    const variables = {
-      input: { doctor: '5f734879771a8e07a89434c6', schedule: schedule.id }
-    }
+    const variables = { input: { schedule: schedule.id } }
 
     try {
       await missingPatient({ variables })

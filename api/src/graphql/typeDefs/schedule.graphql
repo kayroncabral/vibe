@@ -1,5 +1,5 @@
 extend type Query {
-  schedules(input: SchedulesInput!): [Schedule!]!
+  schedules(input: SchedulesInput): [Schedule!]!
 }
 
 extend type Mutation {
@@ -23,23 +23,19 @@ input CreateSchedulesInput {
 }
 
 input SchedulesInput {
-  doctor: ID!
   filter: SchedulesFilterInput
 }
 
 input ScheduleInput {
   schedule: ID!
-  patient: ID!
 }
 
 input MissingPatientInput {
   schedule: ID!
-  doctor: ID!
 }
 
 input CancelScheduleInput {
   schedule: ID!
-  patient: ID!
 }
 
 type Schedule implements Node {

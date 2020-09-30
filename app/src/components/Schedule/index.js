@@ -71,8 +71,7 @@ const Schedule = ({
   missingPatientLoading,
   onCancel,
   onMissing,
-  onAppointment,
-  onAppointmentSubmit
+  onAppointment
 }) => {
   const classes = useStyles()
 
@@ -236,7 +235,7 @@ const Schedule = ({
                 Ausente
               </Button>
             )}
-            {onAppointment && onAppointmentSubmit && (
+            {onAppointment && (
               <Button
                 variant='contained'
                 color='primary'
@@ -285,8 +284,7 @@ Schedule.propTypes = {
   cancelScheduleLoading: PropTypes.bool,
   onCancel: PropTypes.func,
   onMissing: PropTypes.func,
-  onAppointment: PropTypes.func,
-  onAppointmentSubmit: PropTypes.func
+  onAppointment: PropTypes.func
 }
 
 Schedule.defaultProps = {

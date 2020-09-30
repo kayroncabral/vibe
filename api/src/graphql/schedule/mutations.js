@@ -13,14 +13,13 @@ export const createSchedules = async (parent, { input }, context, info) => {
   return schedules
 }
 
-export const missingPatient = async (parent, { input }, context, info) => {
+export const missingPatient = async (parent, { input }, { user }, info) => {
   if (!ObjectID.isValid(input.schedule)) throw new Error('Id do horário não é válido')
-  if (!ObjectID.isValid(input.doctor)) throw new Error('Id do médico não é válido')
 
   const schedule = await Schedule.findById(input.schedule)
   if (!schedule) throw new Error('Horário não encontrado')
   if (
-    schedule.doctor.toString() !== input.doctor ||
+    schedule.doctor.toString() !== user.id ||
     schedule.status !== ScheduleStatus.BOOKED.toUpperCase()
   ) {
     throw new Error('Não é possível marcar ausência')
@@ -33,9 +32,8 @@ export const missingPatient = async (parent, { input }, context, info) => {
   return schedule
 }
 
-export const schedule = async (parent, { input }, context, info) => {
+export const schedule = async (parent, { input }, { user }, info) => {
   if (!ObjectID.isValid(input.schedule)) throw new Error('Id do horário não é válido')
-  if (!ObjectID.isValid(input.patient)) throw new Error('Id do paciente não é válido')
 
   const schedule = await Schedule.findById(input.schedule)
   if (!schedule) throw new Error('Horário não encontrado')
@@ -43,7 +41,7 @@ export const schedule = async (parent, { input }, context, info) => {
     throw new Error('Horário indisponível')
   }
 
-  schedule.patient = input.patient
+  schedule.patient = user.id
   schedule.status = ScheduleStatus.BOOKED
   schedule.scheduledAt = new Date()
 
@@ -52,14 +50,13 @@ export const schedule = async (parent, { input }, context, info) => {
   return schedule
 }
 
-export const cancelSchedule = async (parent, { input }, context, info) => {
+export const cancelSchedule = async (parent, { input }, { user }, info) => {
   if (!ObjectID.isValid(input.schedule)) throw new Error('Id do horário não é válido')
-  if (!ObjectID.isValid(input.patient)) throw new Error('Id do paciente não é válido')
 
   const schedule = await Schedule.findById(input.schedule)
   if (!schedule) throw new Error('Horário não encontrado')
   if (
-    schedule.patient.toString() !== input.patient ||
+    schedule.patient.toString() !== user.id ||
     schedule.status !== ScheduleStatus.BOOKED.toUpperCase()
   ) {
     throw new Error('Não é possível cancelar')

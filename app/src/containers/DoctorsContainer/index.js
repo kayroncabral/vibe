@@ -12,9 +12,7 @@ const DoctorsContainer = () => {
   const [schedule, { loading: scheduleLoading }] = useMutation(SCHEDULE)
 
   const handleSchedule = async ({ id }) => {
-    const variables = {
-      input: { schedule: id, patient: '5f729992794bea0587be9604' }
-    }
+    const variables = { input: { schedule: id } }
 
     try {
       await schedule({ variables })

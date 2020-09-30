@@ -25,20 +25,20 @@ const Calendar = ({ loading, schedules, onSchedule }) => {
   const groups = groupByDate(schedules, 'date')
 
   const renderSchedule = (schedule, index) => {
-    const booked = schedule.status === ScheduleStatus.BOOKED.value
+    const available = schedule.status === ScheduleStatus.AVAILABLE.value
     const selected = selectedId === schedule.id
 
     return (
       <Grid key={index} container item justify='center'>
         <Button
           className={clsx({
-            [classes.disabled]: booked
+            [classes.disabled]: !available
           })}
-          variant={booked ? 'text' : 'outlined'}
+          variant={!available ? 'text' : 'outlined'}
           color='primary'
           size='small'
           loading={selected && loading}
-          disabled={booked}
+          disabled={!available}
           onClick={handleSchedule(schedule)}
         >
           {format(parseISO(schedule.date), 'HH:mm')}

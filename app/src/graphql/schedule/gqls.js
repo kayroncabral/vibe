@@ -29,7 +29,7 @@ export const MISSING_PATIENT = gql`
 `
 
 export const SCHEDULES = gql`
-  query($input: SchedulesInput!) {
+  query($input: SchedulesInput) {
     schedules(input: $input) {
       id
       doctor {

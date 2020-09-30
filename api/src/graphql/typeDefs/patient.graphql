@@ -3,7 +3,7 @@ extend type Query {
 }
 
 extend type Mutation {
-  createPatient(input: CreatePatientInput!): Patient!
+  createPatient(input: CreatePatientInput!): AuthPatient!
 }
 
 input CreatePatientInput {
@@ -11,6 +11,11 @@ input CreatePatientInput {
   sex: Sex!
   birthday: Date!
   federalTaxNumber: String!
+}
+
+type AuthPatient {
+  patient: Patient!
+  token: String!
 }
 
 type Patient implements User & Node {

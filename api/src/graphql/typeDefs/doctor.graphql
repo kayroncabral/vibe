@@ -3,7 +3,7 @@ extend type Query {
 }
 
 extend type Mutation {
-  createDoctor(input: CreateDoctorInput!): Doctor!
+  createDoctor(input: CreateDoctorInput!): AuthDoctor!
 }
 
 input CreateDoctorInput {
@@ -21,6 +21,11 @@ input SpecializationInput {
 
 input SubspecializationInput {
   name: String!
+}
+
+type AuthDoctor {
+  doctor: Doctor!
+  token: String!
 }
 
 type Doctor implements User & Node {

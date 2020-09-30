@@ -8,21 +8,14 @@ import { SCHEDULES, CANCEL_SCHEDULE } from 'src/graphql/schedule/gqls'
 
 const MySchedulesContainer = () => {
   const { loading: schedulesLoading, data } = useQuery(SCHEDULES, {
-    variables: {
-      input: {
-        doctor: '5f734943771a8e07a89434c7'
-      }
-    },
-    notifyOnNetworkStatusChange: true
+    fetchPolicy: 'network-only'
   })
   const [cancelSchedule, { loading: cancelScheduleLoading }] = useMutation(
     CANCEL_SCHEDULE
   )
 
   const handleCancelSchedule = async (schedule) => {
-    const variables = {
-      input: { patient: '5f734c4b771a8e07a89434ca', schedule: schedule.id }
-    }
+    const variables = { input: { schedule: schedule.id } }
 
     try {
       await cancelSchedule({ variables })

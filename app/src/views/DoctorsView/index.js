@@ -1,7 +1,10 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
+import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 
@@ -10,6 +13,8 @@ import Loading from 'src/components/Loading'
 
 import useStyles from 'src/views/DoctorsView/styles'
 
+import { Paths } from 'src/utils/enums'
+
 const DoctorsView = ({
   doctorsLoading,
   scheduleLoading,
@@ -17,6 +22,12 @@ const DoctorsView = ({
   onSchedule
 }) => {
   const classes = useStyles()
+
+  const history = useHistory()
+
+  const mySchedulesClick = (event) => {
+    history.push(Paths.mySchedules.value)
+  }
 
   const renderDoctor = (doctor) => (
     <Grid key={doctor.id} item>
@@ -33,9 +44,20 @@ const DoctorsView = ({
       {doctorsLoading ? (
         <Loading />
       ) : (
-        <Grid container spacing={2}>
-          {doctors.map(renderDoctor)}
-        </Grid>
+        <>
+          <Box display='flex' justifyContent='flex-end' mb={2}>
+            <Button
+              variant='contained'
+              color='primary'
+              onClick={mySchedulesClick}
+            >
+              Meus agendamentos
+            </Button>
+          </Box>
+          <Grid container spacing={2}>
+            {doctors.map(renderDoctor)}
+          </Grid>
+        </>
       )}
     </Container>
   )
