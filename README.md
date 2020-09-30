@@ -32,7 +32,7 @@ Teste para Vibe saúde
 - [x] Listar agendamentos
   - [x] Filtar por período
   - [x] Filtar por status
-  - [ ] Filtar por nome do paciente (incompleto)
+  - [ ] Filtar por nome do paciente (⚠️ incompleto)
 - [x] Teste de integração de listar agendamentos
 - [x] Criar da consulta
 - [x] Teste de integração de criar consulta
