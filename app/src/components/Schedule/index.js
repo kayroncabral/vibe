@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 
 import clsx from 'clsx'
-import { parseISO, format, isToday, isTomorrow } from 'date-fns'
+import {
+  parseISO,
+  format,
+  isToday,
+  isTomorrow,
+  differenceInHours
+} from 'date-fns'
 import PropTypes from 'prop-types'
 
 import Avatar from '@material-ui/core/Avatar'
@@ -61,8 +67,9 @@ const formatDate = (date) => {
 
 const Schedule = ({
   schedule,
+  cancelScheduleLoading,
   missingPatientLoading,
-  onSchedule,
+  onCancel,
   onMissing,
   onAppointment,
   onAppointmentSubmit
@@ -79,13 +86,20 @@ const Schedule = ({
     onMissing(schedule)
   }
 
+  const handleCancel = (event) => {
+    onCancel(schedule)
+  }
+
   const handleCreateAppointment = (event) => {
     onAppointment(schedule)
   }
 
+  const prefix = schedule.doctor?.sex === Sex.MALE.value ? 'Dr. ' : 'Dra. '
   const booked = schedule.status === ScheduleStatus.BOOKED.value
   const appointmentDone =
     schedule.status === ScheduleStatus.APPOINTMENT_DONE.value
+  const lessThan24Hours =
+    differenceInHours(new Date(schedule.date), Date.now()) < 24
 
   return (
     <Card className={classes.root}>
@@ -110,17 +124,26 @@ const Schedule = ({
                   {ScheduleStatus[schedule.status].label}
                 </Typography>
                 {booked && (
-                  <Typography
-                    className={classes.caption}
-                    component='span'
-                    gutterBottom
-                  >
-                    {formatDate(schedule.date)}
-                  </Typography>
+                  <>
+                    <Typography
+                      className={classes.caption}
+                      component='span'
+                      gutterBottom
+                    >
+                      {formatDate(schedule.date)}
+                    </Typography>
+                    {schedule.doctor && (
+                      <Typography className={classes.caption} gutterBottom>
+                        com{' '}
+                        <b>
+                          {prefix} {schedule.doctor?.name}
+                        </b>
+                      </Typography>
+                    )}
+                  </>
                 )}
               </Box>
             </Grid>
-            <Grid></Grid>
             {schedule.status !== ScheduleStatus.BOOKED.value && (
               <Grid container>
                 <EventIcon color='disabled' />
@@ -188,25 +211,41 @@ const Schedule = ({
           [classes.center]: appointmentDone
         })}
       >
+        {onCancel && booked && (
+          <Button
+            variant='outlined'
+            color='secondary'
+            size='small'
+            loading={cancelScheduleLoading}
+            disabled={lessThan24Hours}
+            onClick={handleCancel}
+          >
+            Cancelar
+          </Button>
+        )}
         {booked && (
           <>
-            <Button
-              variant='outlined'
-              color='secondary'
-              size='small'
-              loading={missingPatientLoading}
-              onClick={handleMissing}
-            >
-              Ausente
-            </Button>
-            <Button
-              variant='contained'
-              color='primary'
-              size='small'
-              onClick={handleCreateAppointment}
-            >
-              Iniciar consulta
-            </Button>
+            {onMissing && (
+              <Button
+                variant='outlined'
+                color='secondary'
+                size='small'
+                loading={missingPatientLoading}
+                onClick={handleMissing}
+              >
+                Ausente
+              </Button>
+            )}
+            {onAppointment && onAppointmentSubmit && (
+              <Button
+                variant='contained'
+                color='primary'
+                size='small'
+                onClick={handleCreateAppointment}
+              >
+                Iniciar consulta
+              </Button>
+            )}
           </>
         )}
         {appointmentDone && (
@@ -227,6 +266,9 @@ const Schedule = ({
 Schedule.propTypes = {
   schedule: PropTypes.shape({
     date: PropTypes.string,
+    doctor: PropTypes.shape({
+      name: PropTypes.string
+    }),
     patient: PropTypes.shape({
       name: PropTypes.string,
       sex: PropTypes.string,
@@ -240,7 +282,8 @@ Schedule.propTypes = {
     status: PropTypes.string
   }),
   missingPatientLoading: PropTypes.bool,
-  onSchedule: PropTypes.func,
+  cancelScheduleLoading: PropTypes.bool,
+  onCancel: PropTypes.func,
   onMissing: PropTypes.func,
   onAppointment: PropTypes.func,
   onAppointmentSubmit: PropTypes.func
@@ -248,10 +291,7 @@ Schedule.propTypes = {
 
 Schedule.defaultProps = {
   missingPatientLoading: false,
-  onSchedule: () => {},
-  onMissing: () => {},
-  onAppointment: () => {},
-  onAppointmentSubmit: () => {}
+  cancelScheduleLoading: false
 }
 
 export default Schedule

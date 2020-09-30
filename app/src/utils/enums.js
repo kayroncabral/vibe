@@ -1,11 +1,15 @@
 export const Paths = Object.freeze({
   doctors: {
     path: '/doctors',
-    label: 'Doctors'
+    label: 'Médicos'
   },
   schedules: {
     path: '/schedules',
-    label: 'Schedules'
+    label: 'Agendamentos'
+  },
+  mySchedules: {
+    path: '/my-schedules',
+    label: 'Meus Agendamentos'
   }
 })
 

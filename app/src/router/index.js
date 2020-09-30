@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 
 import DoctorsContainer from 'src/containers/DoctorsContainer'
+import MySchedulesContainer from 'src/containers/MySchedulesContainer'
 import SchedulesContainer from 'src/containers/SchedulesContainer'
 
 import Public from 'src/router/Public'
@@ -27,6 +28,11 @@ const AppRouter = () => {
             exact
             path={Paths.schedules.path}
             component={SchedulesContainer}
+          />
+          <Public
+            exact
+            path={Paths.mySchedules.path}
+            component={MySchedulesContainer}
           />
         </Switch>
       </Router>

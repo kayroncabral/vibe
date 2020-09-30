@@ -9,6 +9,16 @@ export const SCHEDULE = gql`
   }
 `
 
+export const CANCEL_SCHEDULE = gql`
+  mutation($input: CancelScheduleInput!) {
+    cancelSchedule(input: $input) {
+      id
+      status
+      canceledAt
+    }
+  }
+`
+
 export const MISSING_PATIENT = gql`
   mutation($input: MissingPatientInput!) {
     missingPatient(input: $input) {
@@ -22,6 +32,13 @@ export const SCHEDULES = gql`
   query($input: SchedulesInput!) {
     schedules(input: $input) {
       id
+      doctor {
+        name
+        sex
+        specializations {
+          name
+        }
+      }
       patient {
         name
         sex

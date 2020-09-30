@@ -15,11 +15,13 @@ import useStyles from 'src/views/SchedulesView/styles'
 
 const SchedulesView = ({
   schedulesLoading,
+  cancelScheduleLoading,
   missingPatientLoading,
   createAppointmentLoading,
   schedules,
   onFilterApply,
   onMissingPatient,
+  onCancelSchedule,
   onCreateAppointment
 }) => {
   const classes = useStyles()
@@ -37,10 +39,6 @@ const SchedulesView = ({
     setCreateAppointmentOpen(false)
   }
 
-  const handleMissingPatient = (schedule) => {
-    onMissingPatient(schedule)
-  }
-
   const handleCreateAppointmentSubmit = async (appointment) => {
     await onCreateAppointment(selectedSchedule, appointment)
     handleCreateAppointmentClose()
@@ -50,8 +48,10 @@ const SchedulesView = ({
     <Grid key={schedule.id} item xs={12}>
       <Schedule
         schedule={schedule}
+        cancelScheduleLoading={cancelScheduleLoading}
         missingPatientLoading={missingPatientLoading}
-        onMissing={handleMissingPatient}
+        onMissing={onMissingPatient}
+        onCancel={onCancelSchedule}
         onAppointment={handleCreateAppointmentOpen}
       />
     </Grid>
@@ -61,9 +61,11 @@ const SchedulesView = ({
 
   return (
     <div className={classes.root}>
-      <Container maxWidth='md'>
-        <Filter onApply={onFilterApply} />
-      </Container>
+      {onFilterApply && (
+        <Container maxWidth='md'>
+          <Filter onApply={onFilterApply} />
+        </Container>
+      )}
       <Container className={classes.container} maxWidth='sm'>
         {schedulesLoading ? (
           <Loading />
@@ -91,6 +93,7 @@ const SchedulesView = ({
 
 SchedulesView.propTypes = {
   schedulesLoading: PropTypes.bool,
+  cancelScheduleLoading: PropTypes.bool,
   missingPatientLoading: PropTypes.bool,
   createAppointmentLoading: PropTypes.bool,
   schedules: PropTypes.arrayOf(
@@ -104,16 +107,15 @@ SchedulesView.propTypes = {
   ),
   onFilterApply: PropTypes.func,
   onMissingPatient: PropTypes.func,
+  onCancelSchedule: PropTypes.func,
   onCreateAppointment: PropTypes.func
 }
 
 SchedulesView.defaultProps = {
   schedulesLoading: false,
+  cancelScheduleLoading: false,
   missingPatientLoading: false,
-  createAppointmentLoading: false,
-  onFilterApply: () => {},
-  onMissingPatient: () => {},
-  onCreateAppointment: () => {}
+  createAppointmentLoading: false
 }
 
 export default SchedulesView

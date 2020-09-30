@@ -40,18 +40,17 @@ const SchedulesContainer = () => {
     ]
   })
 
-  const handleFilterApply = (filter) => {
+  const handleFilterApply = async (filter) => {
     const variables = { input: { doctor: '5f734879771a8e07a89434c6', filter } }
 
     try {
-      refetch(variables)
+      await refetch(variables)
     } catch (error) {
       console.log(error)
     }
   }
 
   const handleMissingPatient = async (schedule) => {
-    console.log(schedule)
     const variables = {
       input: { doctor: '5f734879771a8e07a89434c6', schedule: schedule.id }
     }
