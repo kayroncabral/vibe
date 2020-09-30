@@ -1,9 +1,9 @@
-#vibe
+# vibe
 Teste para Vibe saúde
 
-##Paciente
+## Paciente
 
-###Backend
+### Backend
 
 - [x] Listar médicos
 - [x] Teste de integração de listar médicos
@@ -14,7 +14,7 @@ Teste para Vibe saúde
 - [x] Cancelar agendamento com 24h de antecedência
 - [x] Teste de integração de cancelar agendamento
 
-###Frontend
+### Frontend
 
 - [x] Consulta de médico por preferência/especialidade
   - [x] Seleção de data e hoário de agendamento
@@ -25,9 +25,9 @@ Teste para Vibe saúde
   - [ ] Teste e2e de cancelar agendamento
 - [] Teste e2e de listar agendamentos
 
-##Médico
+## Médico
 
-###Backend
+### Backend
 
 - [x] Listar agendamentos
   - [x] Filtar por período
@@ -52,11 +52,11 @@ Teste para Vibe saúde
 - [ ] Teste e2e de finalizar agendamento por falta
 - [ ] Teste e2e de listar agendamentos
 
-###Requisitos
+### Requisitos
 
 🐳 Docker
 
-###Como rodar
+### Como rodar
 
 `docker-compose up`
 
@@ -64,15 +64,15 @@ O web app está no localhost:3000
 
 E o banckend graphql no localhost:4000/graphql
 
-###Rodar o seed
+### Rodar o seed
 
 `yarn mongo:seed`
 
-###Resetar db
+### Resetar db
 
 `yarn mongo:reset`
 
-###Rodar testes
+### Rodar testes
 
 Parar o container vibe_api usando o comando
 
