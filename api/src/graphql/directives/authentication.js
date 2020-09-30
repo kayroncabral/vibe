@@ -1,8 +1,5 @@
-import { SchemaDirectiveVisitor } from 'apollo-server-express'
+import { SchemaDirectiveVisitor, AuthenticationError } from 'apollo-server-express'
 import { defaultFieldResolver } from 'graphql'
-
-// import { getAuthFromRequest } from 'src/utils/auth'
-// import { Roles } from 'src/utils/enums'
 
 export class AuthDirective extends SchemaDirectiveVisitor {
   visitObject(type) {
@@ -37,14 +34,7 @@ export class AuthDirective extends SchemaDirectiveVisitor {
         const context = args[2]
         const user = context.user
 
-        // if (
-        //   requiredRole === Roles.ADMIN &&
-        //   getAuthFromRequest(context.request) !== process.env.ADMIN_API_KEY
-        // ) {
-        //   throw new ForbiddenError()
-        // }
-        //
-        // if (!user && requiredRole === 'user') throw new AuthenticationRequiredError()
+        if (user?.role.toUpperCase() !== requiredRole) throw new AuthenticationError()
 
         return resolve.apply(this, args)
       }

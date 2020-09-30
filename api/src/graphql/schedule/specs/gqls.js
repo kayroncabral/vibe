@@ -1,5 +1,5 @@
 export const SCHEDULES = `
-  query($input: SchedulesInput!) {
+  query($input: SchedulesInput) {
     schedules(input: $input) {
       id
       doctor {

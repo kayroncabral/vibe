@@ -1,6 +1,6 @@
-import { createTestClient } from 'apollo-server-testing'
+import { createTestClient } from 'apollo-server-integration-testing'
 import { serial as test } from 'ava'
-import { server } from 'src'
+import { server as apolloServer } from 'src'
 
 import { Doctor } from 'src/models'
 
@@ -20,8 +20,8 @@ test.afterEach.always(async (t) => {
 })
 
 test('should get doctors', async (t) => {
-  const { query } = createTestClient(server)
-  const response = await query({ query: GET_DOCTORS })
+  const { query } = createTestClient({ apolloServer })
+  const response = await query(GET_DOCTORS)
 
   t.is(response.errors, undefined)
   t.not(response.data, null)

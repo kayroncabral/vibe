@@ -3,6 +3,15 @@ export const PATIENT = {
   role: 'patient',
   name: 'Weais Agromgog',
   sex: 'MALE',
-  birthday: '1982-03-31',
+  birthday: '2000-03-31',
   federalTaxNumber: '46563095089'
+}
+
+export const PATIENT_1 = {
+  _id: '5f734c4b771a8e07a89434ca',
+  role: 'patient',
+  name: 'Inaya Harmon',
+  sex: 'male',
+  birthday: '1967-12-06',
+  federalTaxNumber: '46935879078'
 }

@@ -1,9 +1,9 @@
 extend type Query {
-  appointments: [Appointment!]!
+  appointments: [Appointment!]! @isAuthenticated(requires: DOCTOR)
 }
 
 extend type Mutation {
-  createAppointment(input: CreateAppointmentInput!): Appointment!
+  createAppointment(input: CreateAppointmentInput!): Appointment! @isAuthenticated(requires: DOCTOR)
 }
 
 input CreateAppointmentInput {

@@ -1,6 +1,6 @@
-import { createTestClient } from 'apollo-server-testing'
+import { createTestClient } from 'apollo-server-integration-testing'
 import { serial as test } from 'ava'
-import { server } from 'src'
+import { server as apolloServer } from 'src'
 
 import { Doctor, Patient, Schedule, Appointment } from 'src/models'
 
@@ -11,7 +11,10 @@ import { DOCTOR } from 'src/test/payloads/doctors'
 import { PATIENT } from 'src/test/payloads/patients'
 import { SCHEDULE } from 'src/test/payloads/schedules'
 
+import { generateToken } from 'src/utils/authentication'
 import { ScheduleStatus } from 'src/utils/enums'
+
+let headers = null
 
 test.beforeEach(async (t) => {
   await Doctor.deleteMany({})
@@ -19,9 +22,10 @@ test.beforeEach(async (t) => {
   await Schedule.deleteMany({})
   await Appointment.deleteMany({})
 
-  await new Doctor(DOCTOR).save()
+  const doctor = await new Doctor(DOCTOR).save()
   await new Patient(PATIENT).save()
   await new Schedule(SCHEDULE).save()
+  headers = { Authorization: generateToken({ userId: doctor._id }) }
 })
 
 test.afterEach.always(async (t) => {
@@ -32,9 +36,9 @@ test.afterEach.always(async (t) => {
 })
 
 test.only('should create appointment', async (t) => {
-  const { mutate } = createTestClient(server)
+  const { mutate } = createTestClient({ apolloServer, extendMockRequest: { headers } })
   const input = APPOINTMENT_INPUT
-  const response = await mutate({ mutation: CREATE_APPOINTMENT, variables: { input } })
+  const response = await mutate(CREATE_APPOINTMENT, { variables: { input } })
 
   t.is(response.errors, undefined)
   t.not(response.data, null)

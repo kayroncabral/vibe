@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import { User } from 'src/models'
 
 export const authenticate = (request) => {
-  const authorization = request.headers?.authorization
+  const authorization = request?.headers?.authorization
 
   if (authorization) {
     const token = authorization.replace('Bearer ', '')

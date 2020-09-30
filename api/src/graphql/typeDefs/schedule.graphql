@@ -3,11 +3,11 @@ extend type Query {
 }
 
 extend type Mutation {
-  createSchedules(input: CreateSchedulesInput!): [Schedule!]!
+  createSchedules(input: CreateSchedulesInput!): [Schedule!]! @isAuthenticated(requires: DOCTOR)
 
-  schedule(input: ScheduleInput!): Schedule!
-  missingPatient(input: MissingPatientInput!): Schedule!
-  cancelSchedule(input: CancelScheduleInput!): Schedule!
+  schedule(input: ScheduleInput!): Schedule! @isAuthenticated(requires: PATIENT)
+  missingPatient(input: MissingPatientInput!): Schedule! @isAuthenticated(requires: DOCTOR)
+  cancelSchedule(input: CancelScheduleInput!): Schedule! @isAuthenticated(requires: PATIENT)
 }
 
 input SchedulesFilterInput {

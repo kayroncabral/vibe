@@ -20,7 +20,7 @@ type Subscription {
   _empty: String
 }
 
-directive @isAuthenticated(requires: AuthenticationRole = USER) on OBJECT | FIELD_DEFINITION
+directive @isAuthenticated(requires: Role = DOCTOR) on OBJECT | FIELD_DEFINITION
 
 interface Node {
   id: ID!
@@ -33,9 +33,9 @@ interface User {
   role: String!
 }
 
-enum AuthenticationRole {
-  ADMIN
-  USER
+enum Role {
+  DOCTOR
+  PATIENT
 }
 
 enum Sex {
