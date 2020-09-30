@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 
+import clsx from 'clsx'
 import { parseISO, format, isToday, isTomorrow } from 'date-fns'
 import PropTypes from 'prop-types'
 
@@ -9,12 +10,16 @@ import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
+import Collapse from '@material-ui/core/Collapse'
+import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
 import CakeIcon from '@material-ui/icons/Cake'
 import EventIcon from '@material-ui/icons/Event'
+import ExpandLessIcon from '@material-ui/icons/ExpandLess'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import WcIcon from '@material-ui/icons/Wc'
 
 import { ScheduleStatus, Sex } from 'src/utils/enums'
@@ -53,10 +58,24 @@ const formatDate = (date) => {
   return formatted
 }
 
-const Schedule = ({ loading, schedule, onSchedule }) => {
+const Schedule = ({
+  loading,
+  schedule,
+  onSchedule,
+  onAppointment,
+  onAppointmentSubmit
+}) => {
   const classes = useStyles()
 
+  const [expanded, setExpanded] = useState(false)
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded)
+  }
+
   const booked = schedule.status === ScheduleStatus.BOOKED.value
+  const appointmentDone =
+    schedule.status === ScheduleStatus.APPOINTMENT_DONE.value
 
   return (
     <Card className={classes.root}>
@@ -76,7 +95,7 @@ const Schedule = ({ loading, schedule, onSchedule }) => {
                 <Typography
                   className={classes.caption}
                   component='span'
-                  color={booked ? 'primary' : 'secondary'}
+                  color={booked || appointmentDone ? 'primary' : 'secondary'}
                 >
                   {ScheduleStatus[schedule.status].label}
                 </Typography>
@@ -142,14 +161,44 @@ const Schedule = ({ loading, schedule, onSchedule }) => {
             )}
           </Grid>
         </Grid>
+        {appointmentDone && (
+          <Collapse in={expanded} timeout='auto' unmountOnExit>
+            <CardContent>
+              <Typography className={classes.caption} color='textSecondary'>
+                CID: {schedule.appointment?.icd}
+              </Typography>
+              <Typography>{schedule.appointment?.description}</Typography>
+            </CardContent>
+          </Collapse>
+        )}
       </CardContent>
-      {booked && (
-        <CardActions className={classes.actions}>
-          <Button variant='outlined' color='primary' size='small'>
+      {appointmentDone && <Divider variant='middle' />}
+      <CardActions
+        className={clsx(classes.actions, {
+          [classes.center]: appointmentDone
+        })}
+      >
+        {booked && (
+          <Button
+            variant='outlined'
+            color='primary'
+            size='small'
+            onClick={onAppointment}
+          >
             Iniciar consulta
           </Button>
-        </CardActions>
-      )}
+        )}
+        {appointmentDone && (
+          <Button
+            color='primary'
+            size='small'
+            endIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            onClick={handleExpandClick}
+          >
+            {expanded ? 'Mostrar menos' : 'Mostrar mais'}
+          </Button>
+        )}
+      </CardActions>
     </Card>
   )
 }
@@ -164,13 +213,21 @@ Schedule.propTypes = {
       birthday: PropTypes.string,
       federalTaxNumber: PropTypes.string
     }),
+    appointment: PropTypes.shape({
+      icd: PropTypes.string,
+      description: PropTypes.string
+    }),
     status: PropTypes.string
   }),
-  onSchedule: PropTypes.func
+  onSchedule: PropTypes.func,
+  onAppointment: PropTypes.func,
+  onAppointmentSubmit: PropTypes.func
 }
 
 Schedule.defaultProps = {
-  onSchedule: () => {}
+  onSchedule: () => {},
+  onAppointment: () => {},
+  onAppointmentSubmit: () => {}
 }
 
 export default Schedule

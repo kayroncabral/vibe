@@ -19,6 +19,11 @@ export const SCHEDULES = gql`
         birthday
         federalTaxNumber
       }
+      appointment {
+        id
+        icd
+        description
+      }
       date
       status
       scheduledAt

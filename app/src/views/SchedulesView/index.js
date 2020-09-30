@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import PropTypes from 'prop-types'
 
@@ -6,18 +6,46 @@ import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
+import CreateAppointmentDialog from 'src/components/dialogs/CreateAppointmentDialog'
 import Filter from 'src/components/Filter'
 import Loading from 'src/components/Loading'
 import Schedule from 'src/components/Schedule'
 
 import useStyles from 'src/views/SchedulesView/styles'
 
-const SchedulesView = ({ loading, schedules, onFilterApply }) => {
+const SchedulesView = ({
+  schedulesLoading,
+  createAppointmentLoading,
+  schedules,
+  onFilterApply,
+  onCreateAppointment
+}) => {
   const classes = useStyles()
+
+  const [selectedSchedule, setSelectedSchedule] = useState(null)
+  const [createAppointmentOpen, setCreateAppointmentOpen] = useState(false)
+
+  const handleCreateAppointmentOpen = (schedule) => () => {
+    setSelectedSchedule(schedule)
+    setCreateAppointmentOpen(true)
+  }
+
+  const handleCreateAppointmentClose = () => {
+    setSelectedSchedule(null)
+    setCreateAppointmentOpen(false)
+  }
+
+  const handleCreateAppointmentSubmit = async (appointment) => {
+    await onCreateAppointment(selectedSchedule, appointment)
+    handleCreateAppointmentClose()
+  }
 
   const renderSchedule = (schedule) => (
     <Grid key={schedule.id} item xs={12}>
-      <Schedule schedule={schedule} />
+      <Schedule
+        schedule={schedule}
+        onAppointment={handleCreateAppointmentOpen(schedule)}
+      />
     </Grid>
   )
 
@@ -29,7 +57,7 @@ const SchedulesView = ({ loading, schedules, onFilterApply }) => {
         <Filter onApply={onFilterApply} />
       </Container>
       <Container className={classes.container} maxWidth='sm'>
-        {loading ? (
+        {schedulesLoading ? (
           <Loading />
         ) : (
           <Grid container spacing={2} justify='center' alignItems='center'>
@@ -43,12 +71,19 @@ const SchedulesView = ({ loading, schedules, onFilterApply }) => {
           </Grid>
         )}
       </Container>
+      <CreateAppointmentDialog
+        open={createAppointmentOpen}
+        loading={createAppointmentLoading}
+        onSubmit={handleCreateAppointmentSubmit}
+        onClose={handleCreateAppointmentClose}
+      />
     </div>
   )
 }
 
 SchedulesView.propTypes = {
-  loading: PropTypes.bool,
+  schedulesLoading: PropTypes.bool,
+  createAppointmentLoading: PropTypes.bool,
   schedules: PropTypes.arrayOf(
     PropTypes.shape({
       date: PropTypes.string,
@@ -58,11 +93,15 @@ SchedulesView.propTypes = {
       status: PropTypes.string
     })
   ),
-  onFilterApply: PropTypes.func
+  onFilterApply: PropTypes.func,
+  onCreateAppointment: PropTypes.func
 }
 
 SchedulesView.defaultProps = {
-  onFilterApply: () => {}
+  schedulesLoading: false,
+  createAppointmentLoading: false,
+  onFilterApply: () => {},
+  onCreateAppointment: () => {}
 }
 
 export default SchedulesView

@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
   actions: {
     display: 'flex',
     justifyContent: 'flex-end'
+  },
+  center: {
+    justifyContent: 'center'
   }
 }))
 

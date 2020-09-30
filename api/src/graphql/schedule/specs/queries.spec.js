@@ -4,7 +4,7 @@ import { server } from 'src'
 
 import { Doctor, Patient, Schedule } from 'src/models'
 
-import { GET_SCHEDULES } from 'src/graphql/schedule/specs/gqls'
+import { SCHEDULES } from 'src/graphql/schedule/specs/gqls'
 
 import { DOCTOR } from 'src/test/payloads/doctors'
 import { PATIENT } from 'src/test/payloads/patients'
@@ -35,7 +35,7 @@ test.afterEach.always(async (t) => {
 test('should get schedules', async (t) => {
   const { query } = createTestClient(server)
   const input = { doctor: DOCTOR._id }
-  const response = await query({ query: GET_SCHEDULES, variables: { input } })
+  const response = await query({ query: SCHEDULES, variables: { input } })
 
   t.is(response.errors, undefined)
   t.not(response.data, null)

@@ -8,7 +8,8 @@ export const APPOINTMENT = {
   patient: PATIENT._id,
   schedule: SCHEDULE._id,
   icd: 'A37.0',
-  description: 'Coqueluche por Bordetella pertussis'
+  description:
+    'Coqueluche por Bordetella pertussis.Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget duis at tellus at urna condimentum mattis'
 }
 
 export const APPOINTMENT_1 = {
@@ -17,7 +18,8 @@ export const APPOINTMENT_1 = {
   patient: PATIENT._id,
   schedule: SCHEDULE._id,
   icd: 'E66.0',
-  description: 'Obesidade devida a excesso de calorias'
+  description:
+    'Obesidade devida a excesso de calorias.Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc'
 }
 
 export const APPOINTMENT_2 = {

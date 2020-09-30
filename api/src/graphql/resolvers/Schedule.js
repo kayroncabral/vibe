@@ -1,4 +1,4 @@
-import { Patient, Doctor } from 'src/models'
+import { Patient, Doctor, Appointment } from 'src/models'
 
 const Schedule = {
   doctor: (parent, args, context, info) => {
@@ -6,6 +6,9 @@ const Schedule = {
   },
   patient: (parent, args, context, info) => {
     return Patient.findById(parent.patient)
+  },
+  appointment: (parent, args, context, info) => {
+    return Appointment.findById(parent.appointment)
   }
 }
 

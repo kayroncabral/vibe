@@ -12,6 +12,7 @@ export const createAppointment = async (parent, { input }, context, info) => {
   await appointment.save()
 
   schedule.status = ScheduleStatus.APPOINTMENT_DONE
+  schedule.appointment = appointment.id
   await schedule.save()
 
   return appointment

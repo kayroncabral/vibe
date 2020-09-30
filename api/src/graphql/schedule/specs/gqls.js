@@ -1,4 +1,4 @@
-export const GET_SCHEDULES = `
+export const SCHEDULES = `
   query($input: SchedulesInput!) {
     schedules(input: $input) {
       id
@@ -17,6 +17,11 @@ export const GET_SCHEDULES = `
         birthday
         role
         federalTaxNumber
+      }
+      appointment {
+        id
+        icd
+        description
       }
       date
       status

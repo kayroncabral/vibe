@@ -15,6 +15,10 @@ const ScheduleSchema = new mongoose.Schema(
       type: ObjectId,
       ref: 'User'
     },
+    appointment: {
+      type: ObjectId,
+      ref: 'Appointment'
+    },
     date: {
       type: Date,
       required: true
