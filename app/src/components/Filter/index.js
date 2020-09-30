@@ -8,7 +8,6 @@ import {
 import { format } from 'date-fns'
 import PropTypes from 'prop-types'
 
-import Button from '@material-ui/core/Button'
 import FormControl from '@material-ui/core/FormControl'
 import Grid from '@material-ui/core/Grid'
 import InputLabel from '@material-ui/core/InputLabel'
@@ -34,16 +33,18 @@ const Filter = ({ onApply }) => {
 
   const handleChange = (key) => (value) => {
     const newValue = value.target?.value ?? value
-    setFilter((prevFilter) => ({ ...prevFilter, [key]: newValue }))
-  }
+    setFilter((prevFilter) => {
+      const newFilter = { ...prevFilter, [key]: newValue }
 
-  const handleApply = (event) => {
-    const validatedFilter = { ...filter }
+      const validatedFilter = { ...newFilter }
 
-    if (!validatedFilter.name) validatedFilter.name = null
-    if (!validatedFilter.status) validatedFilter.status = null
+      if (!validatedFilter.name) validatedFilter.name = null
+      if (!validatedFilter.status) validatedFilter.status = null
 
-    onApply(validatedFilter)
+      onApply(validatedFilter)
+
+      return newFilter
+    })
   }
 
   const renderMenuItem = (key) => (
@@ -84,41 +85,29 @@ const Filter = ({ onApply }) => {
         </FormControl>
       </Grid>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <Grid container item xs={12} md spacing={2}>
-          <Grid item xs={6} md='auto'>
-            <KeyboardDatePicker
-              variant='inline'
-              format='dd/MM/yyyy'
-              label='De'
-              value={filter.start}
-              onChange={handleChange('start')}
-              disableToolbar
-              autoOk
-            />
-          </Grid>
-          <Grid item xs={6} md='auto'>
-            <KeyboardDatePicker
-              variant='inline'
-              format='dd/MM/yyyy'
-              label='Até'
-              value={filter.end}
-              onChange={handleChange('end')}
-              disableToolbar
-              autoOk
-            />
-          </Grid>
+        <Grid item xs={6} md='auto'>
+          <KeyboardDatePicker
+            variant='inline'
+            format='dd/MM/yyyy'
+            label='De'
+            value={filter.start}
+            onChange={handleChange('start')}
+            disableToolbar
+            autoOk
+          />
+        </Grid>
+        <Grid item xs={6} md='auto'>
+          <KeyboardDatePicker
+            variant='inline'
+            format='dd/MM/yyyy'
+            label='Até'
+            value={filter.end}
+            onChange={handleChange('end')}
+            disableToolbar
+            autoOk
+          />
         </Grid>
       </MuiPickersUtilsProvider>
-      <Grid item xs={12} md='auto'>
-        <Button
-          variant='contained'
-          color='primary'
-          size='small'
-          onClick={handleApply}
-        >
-          Aplicar
-        </Button>
-      </Grid>
     </Grid>
   )
 }
