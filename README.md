@@ -55,6 +55,14 @@ Teste para Vibe saúde
 ### Requisitos
 
 🐳 Docker
+MongoDb
+
+### Como instalar o MongoDb
+
+[Instalar MongoDb](https://docs.mongodb.com/manual/administration/install-community/)
+
+⚠️ Você não precisa levantar o serviço do mongodb na sua máquina (o docker cuida disso internamente), apenas instalar para termos acesso ao
+mongoimport que é resposável por popular o seed (case esteja rodando na sua máquina, derrube o serviço para não haver conflito com a instância do mongo no docker)
 
 ### Como rodar
 
