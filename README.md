@@ -66,11 +66,11 @@ E o banckend graphql no localhost:4000/graphql
 
 ### Rodar o seed
 
-`yarn mongo:seed`
+`cd api && yarn mongo:seed`
 
 ### Resetar db
 
-`yarn mongo:reset`
+`cd api && yarn mongo:reset`
 
 ### Rodar testes
 
