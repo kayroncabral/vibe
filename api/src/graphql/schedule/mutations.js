@@ -1,4 +1,4 @@
-import { differenceInHours } from 'date-fns'
+import { differenceInHours, parseISO } from 'date-fns'
 import { ObjectID } from 'mongodb'
 
 import { Schedule } from 'src/models'
@@ -62,7 +62,7 @@ export const cancelSchedule = async (parent, { input }, { user }, info) => {
     throw new Error('Não é possível cancelar')
   }
 
-  if (differenceInHours(new Date(schedule.date), Date.now()) < 24) {
+  if (differenceInHours(parseISO(schedule.date), Date.now()) < 24) {
     throw new Error('Só é possível cancelar com 24h de antecedência')
   }
 

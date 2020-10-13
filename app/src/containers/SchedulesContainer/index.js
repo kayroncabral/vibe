@@ -1,20 +1,24 @@
 import React from 'react'
 
 import { useQuery, useMutation } from '@apollo/client'
-import { format } from 'date-fns'
+import { startOfDay, endOfDay } from 'date-fns'
 
 import SchedulesView from 'src/views/SchedulesView'
 
 import { CREATE_APPOINTMENT } from 'src/graphql/appointment/gqls'
 import { SCHEDULES, MISSING_PATIENT } from 'src/graphql/schedule/gqls'
 
-const now = format(new Date(), 'yyyy-MM-dd')
+const now = new Date()
 
 const SchedulesContainer = () => {
   const { loading: schedulesLoading, data, refetch } = useQuery(SCHEDULES, {
     variables: {
       input: {
-        filter: { start: now, end: now, status: null }
+        filter: {
+          start: startOfDay(now).toISOString(),
+          end: endOfDay(now).toISOString(),
+          status: null
+        }
       }
     },
     notifyOnNetworkStatusChange: true,

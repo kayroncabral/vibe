@@ -99,7 +99,7 @@ const Schedule = ({
   const appointmentDone =
     schedule.status === ScheduleStatus.APPOINTMENT_DONE.value
   const lessThan24Hours =
-    differenceInHours(new Date(schedule.date), Date.now()) < 24
+    differenceInHours(parseISO(schedule.date), Date.now()) < 24
 
   return (
     <Card className={classes.root}>

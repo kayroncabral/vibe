@@ -5,7 +5,6 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker
 } from '@material-ui/pickers'
-import { format } from 'date-fns'
 import PropTypes from 'prop-types'
 
 import FormControl from '@material-ui/core/FormControl'
@@ -19,7 +18,7 @@ import { ScheduleStatus } from 'src/utils/enums'
 
 import useStyles from './styles'
 
-const now = format(new Date(), 'yyyy-MM-dd')
+const now = new Date()
 
 const Filter = ({ onApply }) => {
   const classes = useStyles()

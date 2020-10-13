@@ -1,5 +1,3 @@
-import { startOfDay, endOfDay } from 'date-fns'
-
 import { Schedule } from 'src/models'
 
 import { Roles } from 'src/utils/enums'
@@ -19,11 +17,11 @@ export const schedules = async (parent, { input }, { user }, info) => {
     conditions.date = {}
 
     if (input.filter?.start) {
-      conditions.date.$gte = startOfDay(new Date(input.filter.start)).toISOString()
+      conditions.date.$gte = input.filter.start
     }
 
     if (input.filter?.end) {
-      conditions.date.$lte = endOfDay(new Date(input.filter.end)).toISOString()
+      conditions.date.$lte = input.filter.end
     }
   }
 
